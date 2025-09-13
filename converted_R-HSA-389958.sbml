@@ -1,0 +1,1536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" level="3" version="1">
+  <notes>
+    <annotation>
+      <p xmlns="http://www.w3.org/1999/xhtml">SBML generated from Reactome version 93 on 6/24/25, 4:00 AM using JSBML version 1.5.</p>
+    </annotation>
+  </notes>
+  <model metaid="metaid_0" id="pathway_389958" name="Cooperation of Prefoldin and TriC/CCT  in actin and tubulin folding">
+    <notes>
+      <p xmlns="http://www.w3.org/1999/xhtml">In the case of actin and tubulin folding, and perhaps other substrates, the emerging polypeptide chain is transferred from the ribosome to TRiC via Prefoldin (Vainberg et al., 1998).</p>
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#metaid_0">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Matthews</vCard:Family>
+                  <vCard:Given>Lisa</vCard:Given>
+                </vCard:N>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Matthews</vCard:Family>
+                  <vCard:Given>Lisa</vCard:Given>
+                </vCard:N>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Weiser</vCard:Family>
+                  <vCard:Given>Joel</vCard:Given>
+                </vCard:N>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>OICR</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2009-01-22T00:24:07Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2023-10-12T00:40:25Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2008-12-01T09:46:41Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqbiol:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-389958"/>
+            </rdf:Bag>
+          </bqbiol:is>
+          <bqbiol:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:9630229"/>
+            </rdf:Bag>
+          </bqbiol:isDescribedBy>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+    <listOfCompartments>
+      <compartment metaid="metaid_2" sboTerm="SBO:0000290" id="compartment_70101" name="cytosol" spatialDimensions="3" size="1.40799999958112e-12" constant="true">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/GO:0005829"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="metaid_1" sboTerm="SBO:0000253" id="species_390499" name="CCT/TRiC:ATP:actin [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q92526, Q99832, P49368, P48643, P50991, P17987, P78371, P40227, P50990, 8x30616, P60709). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390499"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q92526"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q99832"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P49368"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P48643"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50991"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P17987"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P78371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P40227"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50990"/>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:30616"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P60709"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_3" sboTerm="SBO:0000253" id="species_390455" name="CCT/TRiC:ADP [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q92526, Q99832, 8x456216, P49368, P48643, P50991, P17987, P78371, P40227, P50990). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:15519848"/>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:21572988"/>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:9013858"/>
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390455"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q92526"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q99832"/>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:456216"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P49368"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P48643"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50991"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P17987"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P78371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P40227"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50990"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-XTR-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SCE-390455"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-PFA-390455"/>
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_4" sboTerm="SBO:0000253" id="species_390501" name="CCT/TRiC:ADP:non-native tubulin [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q9BVA1, Q9H4B7, P78371, P0DPH8, Q13509, Q9H853, 8x456216, P48643, P68366, P40227, Q6PEY2, P68363, Q13885, P17987, Q9BUF5, Q92526, Q99832, Q9BQE3, P0DPH7, P49368, P50991, P68371, P50990, Q9NY65, P04350, Q71U36, A6NHL2). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390501"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BVA1"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9H4B7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P78371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH8"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13509"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9H853"/>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:456216"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P48643"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68366"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P40227"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q6PEY2"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68363"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13885"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P17987"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BUF5"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q92526"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q99832"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BQE3"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P49368"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50991"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50990"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9NY65"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P04350"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q71U36"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:A6NHL2"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_5" sboTerm="SBO:0000253" id="species_390476" name="CCT/TRiC:ADP:actin [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q92526, Q99832, 8x456216, P49368, P48643, P50991, P17987, P78371, P40227, P50990, P60709). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_5">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390476"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q92526"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q99832"/>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:456216"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P49368"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P48643"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50991"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P17987"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P78371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P40227"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50990"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P60709"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_6" sboTerm="SBO:0000297" id="species_201861" name="ACTB [cytosol]" compartment="compartment_70101" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome EntityWithAccessionedSequence. This is a protein</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_6">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P60709"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-201861"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-2263470"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-XTR-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DDI-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SPO-201861"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SCE-201861"/>
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_7" sboTerm="SBO:0000247" id="species_29372" name="Pi [cytosol]" compartment="compartment_70101" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome SimpleEntity. This is a small compound</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_7">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:43474"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-ALL-29372"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_8" sboTerm="SBO:0000253" id="species_390446" name="CCT/TRiC:ATP:unfolded tubulin complex [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q9BVA1, Q9H4B7, P78371, 8x30616, P0DPH8, Q13509, Q9H853, P48643, P40227, P68366, Q6PEY2, P68363, Q13885, P17987, Q9BUF5, Q92526, Q99832, Q9BQE3, P0DPH7, P49368, P50991, P68371, P50990, Q9NY65, P04350, Q71U36, A6NHL2). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_8">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390446"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BVA1"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9H4B7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P78371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:30616"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH8"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13509"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9H853"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P48643"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P40227"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68366"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q6PEY2"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68363"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13885"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P17987"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BUF5"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q92526"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q99832"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BQE3"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P49368"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50991"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50990"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9NY65"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P04350"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q71U36"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:A6NHL2"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_9" sboTerm="SBO:0000247" id="species_29370" name="ADP [cytosol]" compartment="compartment_70101" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome SimpleEntity. This is a small compound</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_9">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:456216"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-ALL-29370"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_10" sboTerm="SBO:0000253" id="species_390457" name="tubulin-GTP folding intermediate [cytosol]" compartment="compartment_70101" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (P68363, Q9BVA1, Q13885, Q9H4B7, Q9BUF5, P0DPH8, Q9H853, Q13509, 37565, Q9BQE3, P0DPH7, P68371, P68366, Q9NY65, Q71U36, P04350, Q6PEY2, A6NHL2). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_10">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390457"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68363"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BVA1"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13885"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9H4B7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BUF5"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH8"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9H853"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13509"/>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:37565"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BQE3"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68366"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9NY65"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q71U36"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P04350"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q6PEY2"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:A6NHL2"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_11" sboTerm="SBO:0000253" id="species_390460" name="Prefoldin-associated actin/tubulin [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q9UHV9, Q9BVA1, Q13885, Q9H4B7, Q99471, O15212, Q9BUF5, P0DPH8, P60709, O60925, Q13509, Q9BQE3, P0DPH7, P61758, Q9NQP4, P68371, P68366, P04350, Q71U36). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_11">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390460"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9UHV9"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BVA1"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13885"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9H4B7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q99471"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O15212"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BUF5"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH8"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P60709"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O60925"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13509"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BQE3"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P61758"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9NQP4"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68366"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P04350"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q71U36"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_12" sboTerm="SBO:0000247" id="species_113592" name="ATP [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome SimpleEntity. This is a small compound</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_12">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:30616"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-ALL-113592"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_13" sboTerm="SBO:0000247" id="species_29438" name="GTP [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome SimpleEntity. This is a small compound</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_13">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:37565"/>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-ALL-29438"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_14" id="species_390445" name="unfolded actin/tubulin [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome DefinedSet. This is a list of alternative entities, any of which can perform the given function</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_14">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390445"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13509"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BQE3"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BVA1"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13885"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9H4B7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68366"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P04350"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q71U36"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BUF5"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH8"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P60709"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_15" sboTerm="SBO:0000253" id="species_390495" name="actin/tubulin-bound CCT/TRiC:ADP [cytosol]" compartment="compartment_70101" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q9BVA1, Q13885, Q9H4B7, P17987, P78371, Q9BUF5, P0DPH8, P60709, Q13509, Q92526, Q99832, Q9BQE3, P0DPH7, 8x456216, P49368, P48643, P50991, P68371, P68366, P40227, P50990, P04350, Q71U36). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_15">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390495"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BVA1"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13885"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9H4B7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P17987"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P78371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BUF5"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH8"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P60709"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q13509"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q92526"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q99832"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9BQE3"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P0DPH7"/>
+                  <rdf:li rdf:resource="https://identifiers.org/CHEBI:456216"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P49368"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P48643"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50991"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68371"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P68366"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P40227"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P50990"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P04350"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q71U36"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species metaid="metaid_16" sboTerm="SBO:0000253" id="species_390452" name="Prefoldin [cytosol]" compartment="compartment_70101" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Complex. Here is Reactomes nested structure for this complex: (Q9UHV9, P61758, Q9NQP4, Q99471, O15212, O60925). Reactome uses a nested structure for complexes, which cannot be fully represented in SBML Level 3 Version 1 core</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_16">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390452"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:hasPart>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9UHV9"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:P61758"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q9NQP4"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:Q99471"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O15212"/>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O60925"/>
+                </rdf:Bag>
+              </bqbiol:hasPart>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species sboTerm="SBO:0000253" id="avg_species_390499" name="Average of species_390499" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000253" id="avg_species_390455" name="Average of species_390455" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000253" id="avg_species_390501" name="Average of species_390501" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000253" id="avg_species_390476" name="Average of species_390476" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000253" id="avg_species_390446" name="Average of species_390446" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000253" id="avg_species_390460" name="Average of species_390460" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000247" id="avg_species_113592" name="Average of species_113592" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000247" id="avg_species_29438" name="Average of species_29438" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species id="avg_species_390445" name="Average of species_390445" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000253" id="avg_species_390452" name="Average of species_390452" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000253" id="avg_species_390495" name="Average of species_390495" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000253" id="avg_species_390457" name="Average of species_390457" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000247" id="avg_species_29370" name="Average of species_29370" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000247" id="avg_species_29372" name="Average of species_29372" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+      <species sboTerm="SBO:0000297" id="avg_species_201861" name="Average of species_201861" compartment="compartment_70101" initialConcentration="0" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="scale_parameter" value="1" constant="true"/>
+      <parameter id="k_output_species_390495" value="1" constant="true"/>
+      <parameter id="k_output_species_390457" value="1" constant="true"/>
+      <parameter id="k_output_species_29370" value="1" constant="true"/>
+      <parameter id="k_output_species_29372" value="1" constant="true"/>
+      <parameter id="k_output_species_201861" value="1" constant="true"/>
+      <parameter id="k_input_species_390445" value="1e-07" constant="true"/>
+      <parameter id="k_input_species_29438" value="1e-07" constant="true"/>
+      <parameter id="k_input_species_113592" value="1e-07" constant="true"/>
+      <parameter id="k_input_species_390476" value="1e-07" constant="true"/>
+      <parameter id="k_input_species_390501" value="1e-07" constant="true"/>
+      <parameter id="k_forcat_reaction_390453" value="1" constant="true"/>
+      <parameter id="k_forcat_reaction_389961" value="1" constant="true"/>
+      <parameter id="k_forcat_reaction_390459" value="1" constant="true"/>
+      <parameter id="k_forcat_reaction_389980" value="1" constant="true"/>
+      <parameter id="k_forcat_reaction_389954" value="1" constant="true"/>
+      <parameter id="k_forcat_reaction_389970" value="1" constant="true"/>
+      <parameter id="get_time" name="Auxiliary variable used in place of time due to naming restrictions" value="0" constant="false"/>
+    </listOfParameters>
+    <listOfRules>
+      <rateRule variable="get_time">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <cn type="integer"> 1 </cn>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390499">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390499 </ci>
+              <ci> avg_species_390499 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390455">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390455 </ci>
+              <ci> avg_species_390455 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390501">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390501 </ci>
+              <ci> avg_species_390501 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390476">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390476 </ci>
+              <ci> avg_species_390476 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390446">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390446 </ci>
+              <ci> avg_species_390446 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390460">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390460 </ci>
+              <ci> avg_species_390460 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_113592">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_113592 </ci>
+              <ci> avg_species_113592 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_29438">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_29438 </ci>
+              <ci> avg_species_29438 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390445">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390445 </ci>
+              <ci> avg_species_390445 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390452">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390452 </ci>
+              <ci> avg_species_390452 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390495">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390495 </ci>
+              <ci> avg_species_390495 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_390457">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_390457 </ci>
+              <ci> avg_species_390457 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_29370">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_29370 </ci>
+              <ci> avg_species_29370 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_29372">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_29372 </ci>
+              <ci> avg_species_29372 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+      <rateRule variable="avg_species_201861">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <ci> species_201861 </ci>
+              <ci> avg_species_201861 </ci>
+            </apply>
+            <apply>
+              <plus/>
+              <ci> get_time </ci>
+              <cn type="e-notation"> 1 <sep/> -6 </cn>
+            </apply>
+          </apply>
+        </math>
+      </rateRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="metaid_17" id="reaction_390453" name="Hydrolysis of ATP and release of folded actin from CCT/TriC" reversible="false" fast="false" compartment="compartment_70101">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">TriC/CCT-mediated beta-actin folding involves rapid ATP-independent formation of a binary complex, followed by a slower ATP-dependent release of the native product (Gao et al., 1992). Group II chaperonins enclose substrate proteins following substrate binding through the formation of a &quot;built- in&quot; lid over the central cavity. Upon ATP binding, lid formation is triggered by the transition state of ATP hydrolysis (Meyer, et al., 2003).</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_17">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2009-02-09T21:14:52Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2023-03-08T14:40:28Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2008-12-01T09:46:41Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390453"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390453"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:1351421"/>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:12732144"/>
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_390453_input_390499" species="species_390499" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_390453_output_390455" species="species_390455" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_390453_output_201861" species="species_201861" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_390453_output_29372" species="species_29372" stoichiometry="8" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_forcat_reaction_390453 </ci>
+              <ci> species_390499 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_18" id="reaction_389961" name="ADP is exchanged for ATP in the (ADP:CCT/TriC):tubulin complex" reversible="false" fast="false" compartment="compartment_70101">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">The interaction between CCT and unfolded target proteins is thought to occur when CCT is in its ADP-bound state. ADP is then exchanged for ATP in CCT.</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_18">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2009-01-22T00:24:07Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2023-03-08T14:40:28Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2008-12-01T09:46:41Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-389961"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-389961"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:9153422"/>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:7909354"/>
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_389961_input_390501" species="species_390501" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_389961_input_113592" species="species_113592" stoichiometry="8" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_389961_output_29370" species="species_29370" stoichiometry="8" constant="true"/>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_389961_output_390446" species="species_390446" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_forcat_reaction_389961 </ci>
+              <ci> species_390501 </ci>
+              <apply>
+                <power/>
+                <ci> species_113592 </ci>
+                <cn type="integer"> 8 </cn>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_19" id="reaction_390459" name="Exchange of ADP for ATP in CCT/TriC:actin complex" reversible="false" fast="false" compartment="compartment_70101">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">The interaction between CCT and unfolded target proteins is thought to occur when CCT is in its ADP-bound state. ADP is then exchanged for ATP in CCT.</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_19">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2009-02-09T21:14:52Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2023-03-08T14:40:28Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2008-12-01T09:46:41Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390459"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-390459"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:9153422"/>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:7909354"/>
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_390459_input_390476" species="species_390476" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_390459_input_113592" species="species_113592" stoichiometry="8" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_390459_output_390499" species="species_390499" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_390459_output_29370" species="species_29370" stoichiometry="8" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_forcat_reaction_390459 </ci>
+              <ci> species_390476 </ci>
+              <apply>
+                <power/>
+                <ci> species_113592 </ci>
+                <cn type="integer"> 8 </cn>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_20" id="reaction_389980" name="unfolded actin/tubulin associates with prefoldin" reversible="false" fast="false" compartment="compartment_70101">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">During the synthesis of actin and tubulin, the nascent ribosome-associated chains bind to the heteromeric chaperone protein, prefoldin (PFD) (Hansen et al., 1999).</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_20">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2009-01-22T00:24:07Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2023-03-08T14:40:28Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2008-12-01T09:46:41Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-389980"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-389980"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:10209023"/>
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_389980_input_390445" species="species_390445" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_389980_input_390452" species="species_390452" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_389980_output_390460" species="species_390460" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_forcat_reaction_389980 </ci>
+              <ci> species_390445 </ci>
+              <ci> species_390452 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_21" id="reaction_389954" name="Hydrolysis of ATP and release of tubulin folding intermediate from CCT/TriC" reversible="false" fast="false" compartment="compartment_70101">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Group II chaperonins enclose substrate proteins following substrate binding through the formation of a &quot;built- in&quot; lid over the central cavity. Upon ATP binding, lid formation is triggered by the transition state of ATP hydrolysis (Meyer, et al., 2003). In the case of CCT-mediated tubulin folding, one or more rounds of ATP hydrolysis are likely required before the association of non-exchangeable GTP with chaperonin-bound alpha tubulin.</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_21">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2009-01-22T00:24:07Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2023-03-08T14:40:28Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2008-12-01T09:46:41Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-389954"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-389954"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:12732144"/>
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_389954_input_29438" species="species_29438" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_389954_input_390446" species="species_390446" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_389954_output_390455" species="species_390455" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_389954_output_390457" species="species_390457" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_389954_output_29372" species="species_29372" stoichiometry="8" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_forcat_reaction_389954 </ci>
+              <ci> species_29438 </ci>
+              <ci> species_390446 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="metaid_22" id="reaction_389970" name="Actin/tubulin:prefoldin complex associates with CCT/TriC" reversible="false" fast="false" compartment="compartment_70101">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Unfolded actins and tubulins compete efficiently for binding to TriC/CCT and their chaperonin binding sites appear to be at least in part overlapping (Melki et al., 1993).</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_22">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Matthews</vCard:Family>
+                      <vCard:Given>Lisa</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>NYU School of Medicine, Department of Biochemistry</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2009-01-22T00:24:07Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2023-03-08T14:40:28Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2008-12-01T09:46:41Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-389970"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-389970"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:8104191"/>
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_389970_input_390455" species="species_390455" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000010" id="speciesreference_389970_input_390460" species="species_390460" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_389970_output_390495" species="species_390495" stoichiometry="1" constant="true"/>
+          <speciesReference sboTerm="SBO:0000011" id="speciesreference_389970_output_390452" species="species_390452" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k_forcat_reaction_389970 </ci>
+              <ci> species_390455 </ci>
+              <ci> species_390460 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="degredete_output_species_390495" name="Degredate the output species of the pathway: species_390495" reversible="false" compartment="compartment_70101">
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000253" id="sr_output_species_390495" species="species_390495" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_output_species_390495 </ci>
+              <ci> species_390495 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="degredete_output_species_390457" name="Degredate the output species of the pathway: species_390457" reversible="false" compartment="compartment_70101">
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000253" id="sr_output_species_390457" species="species_390457" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_output_species_390457 </ci>
+              <ci> species_390457 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="degredete_output_species_29370" name="Degredate the output species of the pathway: species_29370" reversible="false" compartment="compartment_70101">
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000247" id="sr_output_species_29370" species="species_29370" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_output_species_29370 </ci>
+              <ci> species_29370 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="degredete_output_species_29372" name="Degredate the output species of the pathway: species_29372" reversible="false" compartment="compartment_70101">
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000247" id="sr_output_species_29372" species="species_29372" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_output_species_29372 </ci>
+              <ci> species_29372 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="degredete_output_species_201861" name="Degredate the output species of the pathway: species_201861" reversible="false" compartment="compartment_70101">
+        <listOfReactants>
+          <speciesReference sboTerm="SBO:0000297" id="sr_output_species_201861" species="species_201861" stoichiometry="1"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_output_species_201861 </ci>
+              <ci> species_201861 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="generate_input_species_390445" name="Create input species of the pathway: species_390445" reversible="false" compartment="compartment_70101">
+        <listOfProducts>
+          <speciesReference id="sr_input_species_390445" species="species_390445" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_input_species_390445 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="generate_input_species_29438" name="Create input species of the pathway: species_29438" reversible="false" compartment="compartment_70101">
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000247" id="sr_input_species_29438" species="species_29438" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_input_species_29438 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="generate_input_species_113592" name="Create input species of the pathway: species_113592" reversible="false" compartment="compartment_70101">
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000247" id="sr_input_species_113592" species="species_113592" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_input_species_113592 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="generate_input_species_390476" name="Create input species of the pathway: species_390476" reversible="false" compartment="compartment_70101">
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000253" id="sr_input_species_390476" species="species_390476" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_input_species_390476 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="generate_input_species_390501" name="Create input species of the pathway: species_390501" reversible="false" compartment="compartment_70101">
+        <listOfProducts>
+          <speciesReference sboTerm="SBO:0000253" id="sr_input_species_390501" species="species_390501" stoichiometry="1"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> scale_parameter </ci>
+              <ci> k_input_species_390501 </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

@@ -1,0 +1,40 @@
+venv/
+
+log
+
+lib64/
+
+# File di output/intermediari LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.synctex.gz
+*.xdv
+*.dvi
+*.ps
+
+# Indici e glossari
+*.idx
+*.ilg
+*.ind
+
+# Directory/artefatti di pacchetti (es. minted)
+_minted-*/
+
+# File temporanei/OS/editor
+*~
+.~*
+.DS_Store
+
+tensorflow*

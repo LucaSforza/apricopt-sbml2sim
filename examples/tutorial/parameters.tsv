@@ -1,0 +1,2 @@
+parameterId	parameterName	parameterScale	lowerBound	upperBound	nominalValue	estimate	distribution	mu	sigma	granularity
+ate_m1_in	AtezolizumabFirstMonthDoseAmount	lin	0	24	0	1	uniform	0	0	0.1

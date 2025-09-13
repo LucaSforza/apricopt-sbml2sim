@@ -1,0 +1,25 @@
+{
+    "kinetic_constants": {
+        "k_activator_modifierspeciesreference_211715_catalyst_68819": -4.088761e-08,
+        "k_activator_modifierspeciesreference_211734_catalyst_69593": -1.58e-12,
+        "k_activator_modifierspeciesreference_8867344_catalyst_9840234": -1.2257e-10,
+        "k_forcat_reaction_211715": -19.48000000021218,
+        "k_forcat_reaction_211716": -19.99999999997743,
+        "k_forcat_reaction_211731": -11.15999999966809,
+        "k_forcat_reaction_211734": -10.8899999786711,
+        "k_forcat_reaction_8867344": 1.09000001058585,
+        "k_input_species_113521": -0.02000000016764,
+        "k_input_species_195125": 0.02000000029055,
+        "k_input_species_211654": 0.02000000072378,
+        "k_input_species_68819": 12.27999999996143,
+        "k_input_species_69593": 5.17000000035566,
+        "k_input_species_8867508": -0.0200000019885,
+        "k_input_species_9840234": 0.04000000063906,
+        "k_output_species_211729": -11.4399999939357,
+        "k_output_species_68819": 0.87000000019388,
+        "k_output_species_69593": -1.039971e-08,
+        "k_output_species_8867509": 0.12999999870992,
+        "k_output_species_8867513": 0.26000000045711,
+        "k_output_species_9840234": 0.03999999900996
+    }
+}

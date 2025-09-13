@@ -1,0 +1,8 @@
+parameterId	parameterName	parameterScale	lowerBound	upperBound	nominalValue	estimate	distribution	mu	sigma	granularity
+k_output_species_9925889	k_output_species_9925889_name	log	-20	20	0	1	normal	0	0	0.0
+k_input_species_9925883	k_input_species_9925883_name	log	-20	20	0	1	normal	0	0	0.0
+k_input_species_189869	k_input_species_189869_name	log	-20	20	0	1	normal	0	0	0.0
+k_forcat_reaction_9925817	k_forcat_reaction_9925817_name	log	-20	20	0	1	normal	0	0	0.0
+k_activator_modifierspeciesreference_9925817_positiveregulator_189869	k_activator_modifierspeciesreference_9925817_positiveregulator_189869_name	log	-20	0	0	1	normal	0	0	0.0
+k_output_species_189869	k_output_species_189869_name	log	-20	20	0	1	normal	0	0	0.0
+scale_parameter	scale_parameter_name	log	0	20	0	1	normal	0	0	0.0

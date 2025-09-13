@@ -1,0 +1,5 @@
+tesi/
+venv/
+_old_src/
+*.png
+log

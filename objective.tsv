@@ -1,0 +1,2 @@
+observableId	observableName	observableFormula	noiseFormula	observableTransformation	noiseDistribution	lowerBound	upperBound
+ate_total_drug	exampleObjective	ate_total_drug	1	lin	normal	0	100000

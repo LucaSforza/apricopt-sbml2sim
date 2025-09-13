@@ -1,0 +1,26 @@
+FROM ubuntu:22.04
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
+    make gdb \
+    python3.10 python3-pip python3.10-venv python3.10-dev python3.10-distutils 
+    
+RUN apt-get install software-properties-common -y && add-apt-repository ppa:ubuntu-toolchain-r/test \
+    && apt-get install -y g++-13 gcc-13 \
+    && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-13 100 \
+    && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-13 100 \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN python3 -m venv /venv-sbml2sim
+RUN echo "source /venv-sbml2sim/bin/activate" >> ~/.bashrc
+
+RUN /venv-sbml2sim/bin/python3 -m pip install --upgrade pip setuptools wheel
+
+RUN /venv-sbml2sim/bin/pip3 install nevergrad requests reactome2py pandas libroadrunner apricopt PyNomadBBO petab
+
+COPY . .
+
+COPY ./lib64/libroadrunner.so /lib
+
+RUN make 

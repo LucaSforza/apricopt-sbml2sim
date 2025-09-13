@@ -1,0 +1,32 @@
+files:
+    model: ./converted_R-HSA-1643713.sbml
+    parameters: ./parameters.tsv
+    constrains: ./constrains.tsv
+    objective: ./objective.tsv
+    valori: ./vals.tsv
+horizon: 10000
+absolute_tolerance: 1.0e-12
+relative_tolerance: 1.0e-06
+time_step: 10
+
+loss_functions:
+    stability:
+        scale: 10000
+    transitorial:
+        scale: 10
+    value:
+        scale: 1
+
+simulator: RoadRunner
+#solver: NOMAD
+random_seed: 966294
+#solver_parameters:
+#    - SEED 104
+#    - MAX_ITERATIONS 1700
+#    - NB_THREADS_PARALLEL_EVAL 1
+#    - MAX_EVAL 1700
+solver: nevergrad
+solver_parameters:
+    optimizer: NGOpt
+    budget: 200000
+    seed: 966294

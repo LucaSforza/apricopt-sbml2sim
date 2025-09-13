@@ -1,0 +1,11 @@
+{
+    "kinetic_constants": {
+        "k_activator_modifierspeciesreference_9925817_positiveregulator_189869": -18.0,
+        "k_forcat_reaction_9925817": 20.0,
+        "k_input_species_189869": -12.0,
+        "k_input_species_9925883": 12.0,
+        "k_output_species_189869": -17.0,
+        "k_output_species_9925889": 13.0,
+        "scale_parameter": 8.0
+    }
+}

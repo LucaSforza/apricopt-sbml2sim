@@ -1,0 +1,86 @@
+\chapter{Modellazione Biologica}
+
+\section{Introduzione}
+
+I modelli biologici che consideriamo sono sistemi dinamici tempo-invarianti, generalmente non lineari, descritti da equazioni differenziali ordinarie (ODE).
+
+Lo stato del sistema al tempo \(t\) è un vettore \(x(t) = (x_1(t),\dots,x_n(t))^\top \in [0,1]^n \subseteq \mathbb{R}^n\), dove \(x_i(t)\) rappresenta la concentrazione normalizzata della i-esima specie. Poiché le concentrazioni sono normalizzate, \(x_i(t)\in[0,1]\) per ogni \(i\) e ogni \(t\).
+
+In forma compatta le ODE si scrivono
+\[
+\frac{dx}{dt} = f(t,x).
+\]
+
+Sia \(m\) il numero di reazioni nel modello.
+
+Per ogni specie \(x_i\) definiamo
+$R_{x_i} \subseteq \{1,\dots,m\}\quad\text{(reazioni in cui \(x_i\) è reattante)}$,
+$P_{x_i} \subseteq \{1,\dots,m\}\quad\text{(reazioni che producono \(x_i\))}.$
+
+Se \(R_{x_i}\neq\emptyset\) e \(P_{x_i}\neq\emptyset\), l'evoluzione temporale di \(x_i\) è data da:
+\[
+\frac{dx_i}{dt}=\sum_{j\in P_{x_i}} v_j(t) - \sum_{j\in R_{x_i}} v_j(t),
+\]
+dove \(v_j(t)\) è la velocità della reazione \(j\).
+
+La velocità di una reazione è data dalla legge dell'azione di massa (mass action).
+
+La velocità di una reazione chimica è proporzionale al prodotto delle concentrazioni dei reagenti, ciascuna elevata al proprio coefficiente stechiometrico
+
+La velocità di una reazione è influenzata da modificatori (enzimi, inibitori). Per modellare l'effetto dei modificatori si usa spesso la funzione di Hill. Per ogni specie modificatrice \(x_\ell\) introduciamo una funzione di Hill generica
+\[
+H_\ell(t) =
+\begin{cases}
+\dfrac{x_\ell(t)^{10}}{K_\ell + x_\ell(t)^{10}}, &\text{se \(x_\ell\) agisce da attivatore},\\[8pt]
+\dfrac{K_\ell}{K_\ell + x_\ell(t)^{10}}, &\text{se \(x_\ell\) agisce da inibitore},
+\end{cases}
+\]
+dove \(K_\ell>0\) è la costante di mezzo-saturazione e dato che è ingnota viene aggiunta cime parametro del modello.
+
+Per la reazione \(i\in\{1,\dots,m\}\) definiamo inoltre:
+
+
+$S_i=\{j\in\{1,\dots,n\}\mid x_j \text{ è reattante della reazione } i\}$,
+
+
+$M_i=\{j\in\{1,\dots,n\}\mid x_j \text{ è modificatore della reazione } i\}$.
+
+$n_i^j$ è la stochiometria della specie $j$ nella reazione $i$.
+
+La velocità \(v_i(t)\) si esprime quindi come
+\[
+v_i(t)=k_i\;\prod_{j\in S_i} x_j(t)^{n_i^j}\;\prod_{j\in M_i} H_j(t),
+\]
+dove \(k_i>0\) è la costante cinetica della reazione. Essa essendo sconosciuta viene aggiunta
+come parametri del modello.
+
+\section{modelli biologici di Pathway}
+
+Un pathway metabolico (o via metabolica)  è una sequenza di reazioni biochimiche che collega metaboliti chiave.
+
+Un pathway è formato da specie di input che non vengono prodotte da reazioni, ma vengono immesse nel pathway.
+Specie intermedie che sono sia prodotte che consumate da reazioni, specie di output che sono solo prodotte da reazioni e mai consumate
+e specie che non vengono ne prodotte ne consumate da alcuna reazione, ma sono enzimi o inibitori che influscono nelle altre reazioni.
+
+Un esempio tipico di input è l'ATP che funge da "energia" per molte reazioni chimiche.
+
+Esse non vengono prodotte da reazioni (\(P_{x_i}=\emptyset\)) ma vengono immesse nel sistema; si modellano con un termine di ingresso constante \(k_{\mathrm{in},i}\):
+
+\[
+\frac{dx_i}{dt}=k_{\mathrm{in},i} - \sum_{j\in R_{x_i}} v_j(t).
+\]
+
+I pathway hanno degli output che sono specie che vengono prodotte ma non consumate (\(R_{x_i}=\emptyset\)); ad esse si aggiunge una reazione di degradazione, che avrà una constante cinetica e ha come unico reattante
+la concentrazione dell'output stesso, quindi seguendo la mass action rule l'equazione differenziale per gli output è come segue:
+\[
+\frac{dx_i}{dt}=\sum_{j\in P_{x_i}} v_j(t) - k_{\mathrm{out},i}\,x_i(t),
+\]
+
+Nei modelli biologici di pathway possono essere presenti specie che non partecipano ne come reattanti ne come prodotti alle reazioni, ma solo come
+modificatori. Quindi queste specie devono avere una costante di immissione ed anche una di degradazione.
+
+Queste specie sono enzimi o inibitori esterni, quindi influiscono sulla velocità delle altre reazioni del modello. La loro dinamica è descritta come segue:
+\[
+\frac{dx_i}{dt}=k_{\mathrm{in},i}-k_{\mathrm{out},i}\,x_i(t).
+\]
+

@@ -1,0 +1,23 @@
+files:
+    model: ./CRC_test.xml
+    objective: ./objective.tsv
+    # observed_outputs: ./observed_outputs.json
+    parameters: ./parameters.tsv
+
+horizon: 196
+absolute_tolerance: 1.0e-12
+relative_tolerance: 1.0e-06
+time_step: 1
+
+loss_functions:
+    stability:
+        scale: 10
+    transitorial:
+        scale: 1
+
+simulator: RoadRunner
+solver: nevergrad
+random_seed: 104
+solver_parameters:
+    optimizer: DE
+    budget: 100

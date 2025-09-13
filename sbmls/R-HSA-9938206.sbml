@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='utf-8' standalone='no'?>
+<!-- tacs -->
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" layout:required="false" level="3" version="1" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1">
+  <notes>
+    <annotation>
+      <p xmlns="http://www.w3.org/1999/xhtml">SBML generated from Reactome version 93 on 7/1/25, 2:41 AM using JSBML version 1.5.</p>
+    </annotation>
+  </notes>
+  <model id="pathway_9938206" metaid="metaid_0" name="Developmental Lineage of Mammary Stem Cells">
+    <notes>
+      <p xmlns="http://www.w3.org/1999/xhtml">During embryonic development in mammals, mammary stem cells (MaSCs) are derived from embryonic non-neural surface ectoderm (Nakanoh et al. 2024, reviewed in Donovan and Cascella 2022). Embryonic ectodermal cells first produce epithelial cells of the mammary ridge in humans, which likely correspond to epithelial cells of the mammary placode in mice. However, as intermediary cell states during human mammary gland development have not been immunohistochemically characterized, and as direct extrapolation from findings in mouse may not be justified (reviewed in Gusterson and Stein 2012), only non-neural surface ectoderm cells and MaSCs have been included in this lineage and the intermediary states will be included as the data becomes available.MaSCs have been studied in detail in mouse development, and have been much less characterized in humans. In the mouse, MaSCs are defined as those cells that are able to generate a functional mammary gland when transplanted in vivo (Shackleton et al. 2006; Stingl et al. 2006), but there is evidence that expression of certain markers in mouse MaSCs changes during different stages of mammary gland morphogenesis e.g. during pregnancy (Desgrosellier et al. 2014). Most data available on human MaSCs is derived from adult stem-like cells in human mammary glands that are able to differentiate in vitro into both myoepithelial and ductal (luminal) epithelial cells and thus are also known as mammary bipotent progenitors (MBiPs). It is uncertain how much these adult human MaSCs/MBiPs differ from embryonic and fetal MaSCs. Multiple reports agree on MaSCs residing within the basal epithelial cell subpopulation in both humans and mice, but the definitive list of markers that can be used to isolate pure MaSCs from within the basal epithelial subset has not been defined (reviewed in Phillips and Kuperwasser 2014).Mouse MaSCs are first apparent in mammary placodes. Lef1 (Lymphoid Enhancer Binding Factor 1) is a transcription factor that binds to beta-catenin (Ctnnb1) after activation by Wnt/β-catenin signaling. The Lef1:Ctnnb1 complex plays a critical role in controlling the transcription of genes involved in mouse mammary placode formation by driving epithelial cell proliferation and differentiation during the early stages of mammary gland development (reviewed in Lindvall et al. 2007). WNT ligand Wnt10b plays an important role in the embryonic stages of mouse mammary gland development, including placode and bud formation (reviewed in Watson and Khaled 2020, Slepicka et al. 2021). Besides Wnt10b, Wnt6 and Wnt10a are also implicated in mouse mammary bud formation (reviewed in McNally and Stein 2017). Wnt4 plays a role in mouse mammary gland development during puberty and pregnancy (reviewed in Slepicka et al. 2021). Wnt4 expression is regulated by progesterone, as it is expressed in progesterone receptor-positive cells (reviewed in Tanos et al. 2012), and it acts as a paracrine mediator of progesterone signaling in the mammary gland (reviewed in McNally and Stein 2017). FGF signaling also plays a role in mammary placode formation, in particular Fgf10-mediated activation of Fgfr2b (reviewed in Mailleux et al. 2002, McNally and Stein 2017), but the FGF receptor Fgfr1 and ligands Fgf4, Fgf8, Fgf7, and Fgf17 are also expressed in the developing placode (reviewed in McNally and Stein 2017). Other signaling pathways studied in mouse that contribute to development of mammary glands and maintenance and differentiation of MaSC include Hedgehog signaling (reviewed in Lewis and Veltmaat 2004), NOTCH signaling (Bouras et al. 2008, reviewed in Edwards and Brennan 2021), and estrogen and progesterone signaling (Feng et al. 2007, reviewed in Tanos et al. 2012). The involvement of FGF10 in generation and maintenance of MaSCs appears to be conserved in humans (Qu et al. 2017, Ortiz et al. 2024).In normal adult human breast epithelium, mammary stem cells are rare and are located in the ductal part of terminal ductal lobular units (Villadsen et al. 2007; Ginestier et al. 2007).Recent studies indicate that the MaSC/MBiP cell population is heterogeneous, and it is likely that both early and late MaSCs exist with not completely overlapping sets of markers (Scheele et al. 2017, reviewed in Visvader and Stingl 2014 and Slepicka et al. 2021).</p>
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#metaid_0">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Orlic-Milacic</vCard:Family>
+                  <vCard:Given>Marija</vCard:Given>
+                </vCard:N>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>OICR</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Qiao</vCard:Family>
+                  <vCard:Given>Jingping</vCard:Given>
+                </vCard:N>
+              </rdf:li>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Weiser</vCard:Family>
+                  <vCard:Given>Joel</vCard:Given>
+                </vCard:N>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>OICR</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2025-02-11T00:02:23Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2025-06-06T18:09:21Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2024-10-15T17:11:03Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqbiol:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-9938206" />
+            </rdf:Bag>
+          </bqbiol:is>
+          <bqbiol:isDescribedBy>
+            <rdf:Bag>
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:22426022" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:38289401" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:18940734" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:25117682" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:33085328" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:34295896" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:17785410" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:33082117" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:18371393" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:15300011" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:17873348" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:11782400" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:27796946" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:38427729" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:25482617" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:28135720" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:16397499" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:16395311" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:22809143" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:17420292" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:24888586" />
+              <rdf:li rdf:resource="https://identifiers.org/pubmed:33191272" />
+            </rdf:Bag>
+          </bqbiol:isDescribedBy>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+    <layout:listOfLayouts xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <layout:layout>
+        <layout:listOfCompartmentGlyphs>
+          <layout:compartmentGlyph layout:compartment="compartment_984" layout:id="layout_hidden_compartment_0">
+            <layout:boundingBox>
+              <layout:position layout:x="408" layout:y="399" />
+              <layout:dimensions layout:height="1" layout:width="1" />
+            </layout:boundingBox>
+          </layout:compartmentGlyph>
+        </layout:listOfCompartmentGlyphs>
+        <layout:listOfSpeciesGlyphs>
+          <layout:speciesGlyph layout:id="layout_320" layout:species="species_9925883">
+            <layout:boundingBox>
+              <layout:position layout:x="162" layout:y="51" />
+              <layout:dimensions layout:height="108" layout:width="127" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_322" layout:species="species_9925889">
+            <layout:boundingBox>
+              <layout:position layout:x="162" layout:y="271" />
+              <layout:dimensions layout:height="53" layout:width="135" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+          <layout:speciesGlyph layout:id="layout_323" layout:species="species_189869">
+            <layout:boundingBox>
+              <layout:position layout:x="84" layout:y="196" />
+              <layout:dimensions layout:height="27" layout:width="65" />
+            </layout:boundingBox>
+          </layout:speciesGlyph>
+        </layout:listOfSpeciesGlyphs>
+        <layout:listOfReactionGlyphs>
+          <layout:reactionGlyph layout:id="layout_321" layout:reaction="reaction_9925817">
+            <layout:boundingBox>
+              <layout:position layout:x="220" layout:y="207" />
+              <layout:dimensions layout:height="12" layout:width="12" />
+            </layout:boundingBox>
+            <layout:curve>
+              <layout:listOfCurveSegments>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="225" layout:y="187" />
+                  <layout:end layout:x="226" layout:y="213" />
+                </layout:curveSegment>
+                <layout:curveSegment xsi:type="LineSegment">
+                  <layout:start layout:x="226" layout:y="213" />
+                  <layout:end layout:x="227" layout:y="240" />
+                </layout:curveSegment>
+              </layout:listOfCurveSegments>
+            </layout:curve>
+            <layout:listOfSpeciesReferenceGlyphs>
+              <layout:speciesReferenceGlyph layout:id="layout_321_substrate_0" layout:speciesGlyph="layout_320">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="225" layout:y="187" />
+                      <layout:end layout:x="225" layout:y="162" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_321_product_0" layout:speciesGlyph="layout_322">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="227" layout:y="240" />
+                      <layout:end layout:x="228" layout:y="268" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+              <layout:speciesReferenceGlyph layout:id="layout_321_activator_0" layout:speciesGlyph="layout_323">
+                <layout:curve>
+                  <layout:listOfCurveSegments>
+                    <layout:curveSegment xsi:type="LineSegment">
+                      <layout:start layout:x="152" layout:y="210" />
+                      <layout:end layout:x="226" layout:y="213" />
+                    </layout:curveSegment>
+                  </layout:listOfCurveSegments>
+                </layout:curve>
+              </layout:speciesReferenceGlyph>
+            </layout:listOfSpeciesReferenceGlyphs>
+          </layout:reactionGlyph>
+        </layout:listOfReactionGlyphs>
+        <layout:listOfTextGlyphs>
+          <layout:textGlyph layout:graphicalObject="layout_320" layout:id="text_layout_320" layout:text="embryonic non-neural surface ectoderm cell">
+            <layout:boundingBox>
+              <layout:position layout:x="173" layout:y="105" />
+              <layout:dimensions layout:height="49" layout:width="104" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_322" layout:id="text_layout_322" layout:text="mammary stem cell">
+            <layout:boundingBox>
+              <layout:position layout:x="165" layout:y="297" />
+              <layout:dimensions layout:height="21" layout:width="128" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+          <layout:textGlyph layout:graphicalObject="layout_323" layout:id="text_layout_323" layout:text="FGF10">
+            <layout:boundingBox>
+              <layout:position layout:x="93" layout:y="199" />
+              <layout:dimensions layout:height="21" layout:width="47" />
+            </layout:boundingBox>
+          </layout:textGlyph>
+        </layout:listOfTextGlyphs>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <listOfCompartments>
+      <compartment constant="true" id="compartment_984" metaid="metaid_2" name="extracellular region" sboTerm="SBO:0000290">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/GO:0005576" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species boundaryCondition="false" compartment="compartment_984" constant="false" hasOnlySubstanceUnits="false" id="species_189869" metaid="metaid_1" name="FGF10 [extracellular region]" sboTerm="SBO:0000252">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome EntityWithAccessionedSequence. This is a protein</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_1">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/uniprot:O15520" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-189869" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isHomologTo>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-MMU-189869" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-RNO-189869" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CFA-189869" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-BTA-189869" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-SSC-189869" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DRE-189869" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-XTR-189869" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-GGA-189869" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-DME-189869" />
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-CEL-189869" />
+                </rdf:Bag>
+              </bqbiol:isHomologTo>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="species_9925889" metaid="metaid_3" name="mammary stem cell" sboTerm="SBO:0000297">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Cell. Not available</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_3">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-9925889" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species boundaryCondition="false" constant="false" hasOnlySubstanceUnits="false" id="species_9925883" metaid="metaid_4" name="embryonic non-neural surface ectoderm cell" sboTerm="SBO:0000297">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">Derived from a Reactome Cell. Not available</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_4">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-9925883" />
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction fast="false" id="reaction_9925817" metaid="metaid_5" name="Embryonic ectoderm cell produces mammary stem cell" reversible="false">
+        <notes>
+          <p xmlns="http://www.w3.org/1999/xhtml">This cell development step describes how mammary stem cells (MaSCs) originate from embryonic non-neural surface ectoderm cells.Embryonic ectodermal cells first produce epithelial cells of the mammary ridge in humans, which likely correspond to epithelial cells of the mammary placode in mice. However, as the cells of the mammary ridge, which appear during gestational weeks GW6 and GW7, have not been immunohistochemically characterized in humans and as direct extrapolation from findings in mouse mammary placodes may not be justified (reviewed in Gusterson and Stein 2012), this initial cell development step of the mammary cell lineages is not shown. Instead, production of MaSCs of the primary bud is depicted, as these cells have been partially immunohistochemically characterized in humans (reviewed in Gusterson and Stein 2012).Embryonic non-neural surface ectoderm cells as the cells of origin of MaSCsCells of the embryonic ectoderm develop during gastrulation and line the outer surface of the developing embryo (reviewed in Donovan and Cascella 2022). It is important to distinguish between embryonic ectoderm and amniotic ectoderm, and between embryonic neural ectoderm and embryonic non-neural ectoderm (Nakanoh et al. 2024). Skin epidermis and skin adnexa, such as mammary glands, develop from non-neural embryonic ectoderm (Nakanoh et al. 2024, reviewed in Donovan and Cascella 2022). While mammary glands develop from the lateral ectoderm at the dorso-ventral boundary (reviewed in Spina and Cowin 2021), ectodermal patterning along dorso-ventral, median-lateral, and anterior-posterior axes has been poorly characterized in humans, and therefore a generic embryonic ectoderm cell is shown. As the embryonic ectoderm develops early after fertilization, before the pregnancy is usually known, but after the ethically approved window of in vitro growth of human embryos, our knowledge of growth factors that affect human embryonic ectoderm and markers of embryonic ectoderm is mostly derived from in vitro experimentation with human embryonic stem cells (hESCs) or human induced pluripotent stem cells (hiPSCs) in comparison with in vivo and in vitro studies of mouse embryonic development.Markers of the non-neural embryonic ectoderm cell are listed in the table below (in the table, "No" means that the marker is not listed for the specified cell type while "N/A" means that the specified cell type is not annoted in the cited external marker database).Table of markers of nonneural embryonic ectoderm cells. Marker (protein/RNA)Literature ReferenceCellMarker database – RNA/Protein (Hu et al. 2022)PanglaoDB – RNA (Franzén et al. 2019)CDH1 (protein, RNA)Leung et al. 2013 (protein, RNA: hESC-derived nonneuronal embryonic ectoderm cells); Qu et al. 2016 (protein, RNA: hiPSC-derived embryonic surface ectoderm cells);Britton et al. 2019 (protein, RNA: hESC-derived nonneuronal embryonic ectoderm cells);Nakanoh et al. 2024 (RNA: hESC-derived nonneuronal embryonic ectoderm cells); NoN/ADLX5 (protein, RNA) Leung et al. 2013 (protein, RNA: hESC-derived nonneuronal embryonic ectoderm cells);Qu et al. 2016 (protein, RNA: hiPSC-derived embryonic surface ectoderm cells);Tyser et al. 2021 (RNA: ectoderm cell from gastrulating human embryo at GW4-5);Nakanoh et al. 2024 (RNA: hESC-derived embryonic ectoderm cells); NoN/AGATA3 (protein, RNA) Leung et al. 2013 (protein, RNA: hESC-derived nonneuronal embryonic ectoderm cells);Qu et al. 2016 (protein, RNA: hiPSC-derived embryonic surface ectoderm cells);Britton et al. 2019 (protein, RNA: hESC-derived nonneuronal embryonic ectoderm cells);Tyser et al. 2021 (RNA: ectoderm cell from gastrulating human embryo at GW4-5);Nakanoh et al. 2024 (RNA: hESC-derived nonneuronal embryonic ectoderm cells); NoNATFAP2A (protein, RNA) Leung et al. 2013 (protein, RNA: hESC-derived nonneuronal embryonic ectoderm cells);Qu et al. 2016 (protein, RNA: hiPSC-derived embryonic surface ectoderm cells);Tchieu et al. 2017 (protein: hiPSC-derived nonneural ectoderm cells);Britton et al. 2019 (protein, RNA: hESC-derived nonneuronal embryonic ectoderm cells);Tyser et al. 2021 (RNA: ectoderm cell from gastrulating human embryo at GW4-5);Nakanoh et al. 2024 (protein, RNA: hESC-derived nonneuronal embryonic ectoderm cells); NoNATFAP2C (protein, RNA) Qu et al. 2016 (protein, RNA: hiPSC-derived embryonic surface ectoderm cells);Nakanoh et al. 2024 (RNA: hESC-derived nonneuronal embryonic ectoderm cells); NoNAIn Xenopus, CDH1 (E-cadherin) is required for the maintenance of ectoderm integrity during gastrulation (Levine et al. 1994), and is first expressed in the ectoderm of late Xenopus gastrula (Choi and Gumbiner 1989, Levi et al. 1991). During mouse embryonic development, CDH1 expression starts at the two cell-stage and is maintained in the embryonic ectoderm and definitive endoderm and their derivatives at later stages (reviewed in Huber et al. 1996). CDH1 plays an essential role during mouse gastrulation, both in ensuring proper cell adhesion and participating in signal transduction (Basilicata et al. 2016). Two CDH1 molecules expressed on basolateral membranes of neighboring cells form a homotypic trans-homodimer, a central complex in adherens junctions of polarized epithelia (reviewed in Zhang et al. 2023).DLX5 is a homeobox transcription factor that regulates other transcription factors involved in tissue morphogenesis (reviewed in Tan and Testa 2021). Besides human non-neural ectoderom, DLX5 is expressed in the non-neural ectoderm of Xenopus (Luo et al. 2001), chick (Pera et al. 1999, Mc Larren et al. 2003), and mouse (Yang et al. 1998) embryos. In chick embryos, DLX5 is involved in ectodermal patterning (Pera et al. 1999, McLarren et al. 2003).GATA3 is a zinc finger transcription factor that plays a key role in cell differentiation during development and is heavily involved in breast cancer (reviewed in Qiang et al. 2023). Besides human non-neural ectoderm, GATA3 is expressed in non-neural ectoderm in zebrafish embryos (Neave et al. 1995), Xenopus embryos (Read et al. 1998), and chick embryos (Sheng and Stern 1999).TFAP2A and TFAP2C are AP-2 family transcription factors with a known role in ectodermal patterning and morphogenesis of ectodermal derivatives (reviewed in Eckert et al. 2005). TFAP2A and TFAP2C show an evolutionarily conserved expression in non-neural ectoderm (Mitchell et al. 1991, Hoffman et al. 2007, Li and Cornell 2007, Tchieu et al. 2017).Development and markers of MaSCsThe human mammary glands appear as solid epithelial ingrowths into the underlying mesenchyme on both sides of the thoracic wall at the age of 5 weeks in both sexes (Kellokumpu‑Lehtinen et al. 1987). The close connections and concomitant differentiation of the human mammary bud epithelium and mesenchyme during the early embryogenesis, between the sixth and the eleventh developmental weeks, suggest that epithelio‑mesenchymal interactions play an important role in the differentiation of the human mammary glands (Kellokumpu‑Lehtinen et al. 1987). Differences between the male and female mammary epithelium or mesenchyme are not observed on the histological level during early embryonic development (Kellokumpu‑Lehtinen et al. 1987). During later stages of fetal development in animals, androgens cause the regression of the male mammary buds by acting on the mesenchymal cells, which induce the involution of the epithelial cells (reviewed in Chang et al. 2013).Mammary stem cells (MaSCs) have been studied in detail in mouse development, and have been much less characterized in humans. Most data available on human MaSCs is derived from adult stem-like cells in human mammary glands that are able to differentiate in vitro into both myoepithelial and ductal (luminal) epithelial cells and thus are also known as mammary bipotent progenitors (MBiPs). It is uncertain how much these adult human MaSCs/MBiPs differ from embryonic and fetal MaSCs. In the mouse, MaSCs are defined as those cells that are able to generate a functional mammary gland when transplanted in vivo (Shackleton et al. 2006; Stingl et al. 2006), but there is evidence that expression of certain markers in mouse MaSCs changes during different stages of mammary gland morphogenesis e.g. during pregnancy (Desgrosellier et al. 2014). Multiple reports agree on MaSCs residing within the basal epithelial cell subpopulation in both humans and mice, but the definitive list of markers that can be used to isolate pure MaSCs from within the basal epithelial subset has not been defined (reviewed in Phillips and Kuperwasser 2014). Mouse MaSCs are first apparent in mammary placodes. Lef1 (Lymphoid Enhancer Binding Factor 1) is a transcription factor that binds to beta-catenin (Ctnnb1) after activation by Wnt/β-catenin signaling. The Lef1:Ctnnb1 complex plays a critical role in controlling the transcription of genes involved in mouse mammary placode formation by driving epithelial cell proliferation and differentiation during the early stages of mammary gland development (reviewed in Lindvall et al. 2007). WNT ligand Wnt10b plays an important role in the embryonic stages of mouse mammary gland development, including placode and bud formation (reviewed in Watson and Khaled 2020, Slepicka et al. 2021). Besides Wnt10b, Wnt6 and Wnt10a are also implicated in mouse mammary bud formation (reviewed in McNally and Stein 2017). Wnt4 plays a role in mouse mammary gland development during puberty and pregnancy (reviewed in Slepicka et al. 2021). Wnt4 expression is regulated by progesterone, as it is expressed in progesterone receptor-positive cells (reviewed in Tanos et al. 2012), and it acts as a paracrine mediator of progesterone signaling in the mammary gland (reviewed in McNally and Stein 2017). FGF signaling also plays a role in mammary placode formation, in particular Fgf10-mediated activation of Fgfr2b (reviewed in Mailleux et al. 2002, McNally and Stein 2017), but Fgfr1 and ligands Fgf4, Fgf8, Fgf7, and Fgf17 are also expressed in the developing placode (reviewed in McNally and Stein 2017). Other signaling pathways studied in mouse that contribute to development of mammary glands, maintenance and differentiation of MaSC include Hedgehog signaling (reviewed in Lewis and Veltmaat 2004), NOTCH signaling (Bouras et al. 2008, reviewed in Edwards and Brennan 2021), and estrogen and progesterone signaling (Feng et al. 2007, reviewed in Tanos et al. 2012).FGF10 positively regulates differentiation of human induced pluripotent stem cells (hiPSCs) into MaSCs (Qu et al. 2017) and maintenance of pluripotency in mammary organoids derived from normal human breast cells (Ortiz et al. 2024).In normal adult human breast epithelium mammary stem cells are rare and are located in the ductal part of terminal ductal lobular units (Villadsen et al. 2007; Ginestier et al. 2007).Markers of human mammary stem cells/bipotent progenitor cells (MaSC/MBiP) are listed in the table below. Recent studies indicate that MaSC/MBiP cell population is heterogeneous, and it is likely that early and late MaSCs exist with not completely overlapping sets of markers (Scheele et al. 2017, reviewed in Visvader and Stingl 2014 and Slepicka et al. 2021).Table of markers of mammary stem cells (MaSC)/mammary bipotent progenitor cells (MBiPs). Marker (protein/RNA)Literature ReferenceCellMarker database – RNA/Protein (Hu et al. 2022)PanglaoDB – RNA (Franzén et al. 2019)ALDH1A1 (protein)Ginestier et al. 2007 (protein: flow cytometry-sorted cells from normal adult human breasts; immunohistochemistry of normal adult human breasts); N/AN/AALDH1A3 (protein, RNA) Zhao et al. 2010 (protein: immortalized human mammary stem cells);Thong et al. 2020 (RNA: MaSC cluster of adult human breasts by scRNA-seq);N/AN/ACD44 (protein, RNA) Lindley and Briegel 2010 (protein: human mammary epithelial cell (HMEC)-derived MaSC-like cells);Prat et al. 2013 (protein, RNA: flow cytometry-sorted cells from normal adult human breasts);Morel et al. 2017 (protein: flow cytometry-sorted cells from normal adult human breasts);Thong et al. 2020 (RNA: MaSC cluster of adult human breasts by scRNA-seq); N/AN/ACDH1 (E-cadherin) (protein, RNA) Lindley and Briegel 2010 (protein, RNA: human mammary epithelial cell (HMEC)-derived MaSC-like cells);Zhao et al. 2010 (protein: immortalized human mammary stem cells); Prat et al. 2013 (RNA: flow cytometry-sorted cells from normal adult human breasts); N/AN/AEPCAM (protein) Stingl et al. 2001 (protein: flow cytometry-sorted cells from normal adult human breast);Stingl et al. 2005 (protein: flow cytometry-sorted BiP cells from normal adult human breast, but not expressed in pre-cultured BiP cells);Villadsen et al. 2007 (protein, RNA: flow cytometry-sorted stem-like cells from normal adult human breast);Bachelard et al. 2010 (protein; flow cytometry-sorted stem-like cells from normal adult human breast);Mukhopadhyay et al. 2013 (protein: immortalized human stem/progenitor cells derived from mammary epithelial cells - MECs);Phillips et al. 2014 (protein, RNA: MaSCs derived from immortalized human breast epithelial cell line MCF10A in 3D culture);Morel et al. 2017 (protein: flow cytometry-sorted cells from normal adult human breasts); N/AN/AERBB2 (protein, RNA) Stingl et al. 2001 (protein: flow cytometry-sorted cells from normal adult human breast); Stingl et al. 2005 (protein: flow cytometry-sorted BiP cells from normal adult human breast); Prat et al. 2013 (RNA: flow cytometry-sorted cells from normal adult human breasts);Phillips et al. 2014 ( RNA: MaSCs derived from immortalized human breast epithelial cell line MCF10A in 3D culture); N/AN/AITGA6 (CD49f) (protein, RNA) Stingl et al. 2001 (protein: flow cytometry-sorted cells from normal adult human breast);Stingl et al. 2005 (protein: flow cytometry-sorted BiP cells from normal adult human breast);Villadsen et al. 2007 (protein: flow cytometry-sorted stem-like cells from normal adult human breast);Zhao et al. 2010 (protein: immortalized human mammary stem cells);Hilton et al. 2012 (protein: flow cytometry-sorted MBiPs from normal adult human breasts);Mukhopadhyay et al. 2013 (protein: immortalized human stem/progenitor cells derived from mammary epithelial cells - MECs);Prat et al. 2013 (RNA: flow cytometry-sorted cells from normal adult human breasts);Phillips et al. 2014 (protein: MaSCs derived from immortalized human breast epithelial cell line MCF10A in 3D culture);Morel et al. 2017 (protein: flow cytometry-sorted cells from normal adult human breasts);Prasad et al. 2019 (protein: flow cytometry-sorted stem-like cells from normal adult human breast);Thong et al. 2020 (RNA: MaSC cluster of adult human breasts by scRNA-seq); N/AN/AITGB1 (CD29) (protein, RNA) Prat et al. 2013 (RNA: flow cytometry-sorted cells from normal adult human breasts);Zhao et al. 2010 (protein: immortalized human mammary stem cells); N/AN/AKRT5 (protein, RNA) Boecker et al. 2002 (protein: normal adult human mammary tissue);Böcker et al. 2002 (protein: normal adult human mammary tissue);Villadsen et al. 2007 (protein: flow cytometry-sorted stem-like cells from normal adult human breast);Zhao et al. 2010 (protein: immortalized human mammary stem cells);Hilton et al. 2012 (protein: flow cytometry-sorted MBiPs from normal adult human breasts);Mukhopadhyay et al. 2013 (protein: immortalized human stem/progenitor cells derived from mammary epithelial cells - MECs);Prat et al. 2013 (protein: flow cytometry-sorted cells from normal adult human breasts);Morel et al. 2017 (protein: flow cytometry-sorted MaSC-like cells from normal adult human breasts); N/AN/AKRT17 (RNA) Prat et al. 2013 (RNA: flow cytometry-sorted cells from normal adult human breasts);Phillips et al. 2014 (RNA: MaSCs derived from immortalized human breast epithelial cell line MCF10A in 3D culture); N/AN/ATP63 (p63) Zhao et al. 2010 (protein: immortalized human mammary stem cells);Hilton et al. 2012 (protein: flow cytometry-sorted MBiPs from normal adult human breasts); N/AN/AALDH1A1 (also known as ALDH1 or Aldehyde dehydrogenase 1A1) and ALDH1A3 (also known as ALDH6 or Retinaldehyde dehydrogenase 3) belong to the ALDH family of cytosolic NADP+-dependent dehydrogenases that catalyze the irreversible oxidation of a various endogenous and exogenous aldehydes to their corresponding carboxylic acids (reviewed in Tomita et al. 2016). The ALDH1 subfamily has three main isotypes, ALDH1A1, ALDH1A2 and ALDH1A3, and is a marker of normal tissue stem cells and cancer stem cells (reviewed in Tomita et al. 2016). ALDH1 catalytic activity, which plays an important role in oxidation of retinal to retinoic acid (RA), is mainly attributed to ALDH1A1 (reviewed in Tomita et al. 2016). Both ALDH1A1 and ALDH1A3 are expressed in human breast tissue (reviewed in Tomita et al. 2016). The study by Prat et al. 2013 did not detect increased ALDH1A1 transcript levels in MaSC/MBiPs compared to other mammary gland cell types.CD44 is a transmembrane glycoprotein that is a common component of the stem cell niche and exists in a range of alternative splicing-generated isoforms (reviewed in Williams et al. 2013). CD44 modulates signal transduction in the stem cell niche through interactions with hyaluronan, extracellular matrix molecules and growth factors and their cognate receptor tyrosine kinases, thus regulating adhesion, differentiation, homing and migration of stem cells (reviewed in Williams et al. 2013).CDH1 (E-cadherin) mRNA was reported to be significantly enriched in MaSCs/MBiPs isolated from normal human adult breast tissue (Prat et al. 2013), but a study using human mammary epithelial cell (HMEC)-derived MaSC-like cells implied that the stem-like phenotype is associated with reduction in CDH1 mRNA and protein levels, although CDH1 expression is still detectable (Lindley and Briegel 2010). Reduction in CDH1 levels observed in the study by Lindley and Briegel 2010 could be an artefact of upregulation of TGF-beta signaling and activation of wound healing- and EMT-related transcription factors that are known negative regulators of CDH1 gene expression (Phillips et al. 2014, see below).EPCAM (Epithelial cell adhesion molecule) is expressed on a subset of normal epithelial cells, including human and mouse embryonic stem cells (ESCs), where it is necessary for the maintenance of pluripotency and self-renewal (reviewed in Imrich et al. 2012). EPCAM is overexpressed on malignant cells from a variety of cancers, the expression being particularly high on the surface of tumor initiating cells (reviewed in Imrich et al. 2012). EPCAM is a glycosylated protein with a function in homophilic cell adhesion (reviewed in Imrich et al. 2012). EPCAM undergoes gamma-secretase-mediated cleavage, releasing its intracellular domain that can translocate to the nucleus and participate in WNT signaling-regulated transcription by associating with CTNNB1 (beta-catenin), LEF1, and FHL2 (reviewed in Imrich et al. 2012). EPCAM levels are higher in luminal progenitors than in BiPs (Villadsen et al. 2007). In some studies, MaSC cells are considered to be EPCAM negative and positive for ITGA6 (CD49f) (Prat et al. 2013, Martin Carli et al. 2020) or to express low-levels of EPCAM (Bachelard-Cascales et al. 2010).ERBB2 is a receptor tyrosine kinase of the EGFR subfamily that does not bind a ligand but forms heterodimers with other ligand-binding members of the EGFR subfamily, EGFR, ERBB3, and ERBB4 (reviewed in Korkaya and Wicha 2013). ERBB2 plays an important role in the stemness maintenance of both normal mammary stem cells and breast cancer stem cells, and also in the normal breast development and breast carcinogenesis (reviewed in Korkaya and Wicha 2013, Pupa et al. 2021).ITGA6 (alpha6-integrin, also known as CD49f) is part of a stemness signature found on the plasma membrane of more than 30 stem cell populations, particularly in complex with ITGB1 (beta1-integrin, also known as CD29) and ITGB4 (beta4-integrin) (reviewed in Zhou et al. 2018). The heterodimer of ITGA6 and ITGB1 serves as a cellular receptor for laminin, which may play a role in anchoring of stem cells to their niches (reviewed in Zhou et al. 2018). High levels of ITGA6 and ITGB1 are expressed on MaSCs (reviewed in Zhou et al. 2018). In breast cancer tumor-initiating cells, ITGA6 and ITGB1 were shown to promote self-renewal (reviewed in Zhou et al. 2018).Keratins are the largest group of intermediate filaments, primarily expressed in epithelial tissues and integumentary appendages, including mammary glands (reviewed in Toivola et al. 2015). In humans, there are 54 keratin-coding genes, divided into type I (KRT9-KRT40) and type II (KRT1-KRT8, KRT71-KRT86) subfamilies (reviewed in Toivola et al. 2015). Keratins form obligate heterodimers/heteropolymers with preferential dimerization partners varying between different cell types and developmental stages (reviewed in Toivola et al. 2015). Keratins expressed in normal breast tissue include KRT5, KRT7, KRT8, KRT14, KRT15, KRT17, KRT18, and KRT19 (Böcker et al. 2002). While KRT6 is sometimes reported to be expressed in normal breast tissue and MaSCs/MBiPs (Villadsen et al. 2007, Zhao et al. 2010, Morel et al. 2017), it has been reported that some antibodies used for immunohistochemistry cross-react with KRT5 and KRT6, and that KRT5 but not KRT6 is expressed in normal breast (Böcker et al. 2002, Boecker et al. 2002). While multiple studies reported KRT5 as a marker of MaSCs, initially based on the existence of rare cells that are positive for KRT5 but negative for luminal cell keratins KRT8 and KRT18, a study by Clarke et al. 2004 showed that this might be an artefact of paraffin embedding, because immunostaining of frozen breast tissue sections shows that all KRT5-positive cells expressed at least low levels of KRT8 and KRT18. KRT14 is detectable in MaSCs at protein (Villadsen et al. 2007, Zhao et al. 2010, Hilton et al. 2012, Prat et al. 2013, Morel et al. 2017) and mRNA (Hilton et al. 2012, Prat et al. 2013) levels, but detailed analyses have shown that only a small percentage of MaSC express KRT14 (Stingl et al. 2001, Ginestier et al. 2007) or it is undetectable (Phillips et al. 2014). MaSCs positive for KRT14 may represent later stage MaSCs, in the process of committing to the myoepithelial lineage. KRT17 transcript has been reported to be specific to MaSCs (Prat et al. 2013, Phillips et al. 2014).TP63 is a p53 family member with six different splicing isoforms. The two main splicing isoform groups differ in the presence of the N-terminal transactivation (TA) domain and are named TAp63 (group of longer splicing isoforms with the TA domain) and deltaNp63 (group of shorter splicing isoforms with no TA domain) (reviewed in Crum and McKeon 2010). Within each group, there are three splicing isoforms that differ in their C-termini, alpha, beta, and gamma, with alpha having the longest and gamma the shortest C-terminus, so that the six isoforms are TAp63alpha, TAp63beta, TAp63gamma, deltaNp63alpha, deltaNp63beta, and deltaNp63gamma (reviewed in Crum and McKeon 2010). Translation of the TAp63 isoforms appears to be restricted primarily to the female-derived germ cell populations in humans (reviewed in Crum and McKeon 2010). deltaNp63 isoforms are highly expressed in basal cells, immature squamous epithelium, and epithelial stem cells (reviewed in Crum and McKeon 2010). Due to unavailability of antibodies that can distinguish between alpha, beta, and gamma isoforms, the knowledge about protein expression of different deltaNp63 isoforms is limited, but the analysis of transcripts shows that deltaNp63alpha is the dominant isoform (reviewed in Crum and McKeon 2010). deltaNp63alpha is therefore annotated as a marker of MaSCs. MME (Neprilysin, also known as Membrane metalloendopeptidase, Enkephalinase or CD10) is a zinc-dependent metalloendoprotease that inactivates a number of signaling peptides and is implicated in stem cell niche maintenance in various normal tissues, including mammary glands, but also in cancer (reviewed in Maguer-Satta et al. 2011). MME has been reported to be expressed in MaSC by several studies at protein (Stingl et al. 2005, Bachelard-Cascales et al. 2010, Morel et al. 2017) and mRNA levels (Prat et al. 2013). Based on the fact that MME is not expressed in the primary bud during human fetal development (Jolicoeur et al. 2003) and that the majority of studies consider it to be a marker of mature myoepithelial cells of the mammary gland (Jolicoeur et al. 2003, Ginestier et al. 2007, Zhao et al. 2010, Hilton et al. 2012, Mukhopadhyay et al. 2013), MME is not included as a MaSC marker.Potential MaSC markers that are not yet corroborated by enough data to be annotated include CLDN4, CLDN7, OCLN, PROM1 (CD133), SNAI2 (SLUG), TWIST1, TWIST2 and ZEB1.CLDN4, CLDN7, and OCLN mRNAs were reported to be significantly enriched in MaSCs/MBiPs isolated from normal human adult breast tissue (Prat et al. 2013).PROM1 (CD133) mRNA was reported to be significantly enriched in MaSCs/MBiPs isolated from normal human adult breast tissue (Prat et al. 2013) but other studies identify PROM1 as a marker of mammary luminal progenitors (Stingl et al. 2005, Hilton et al. 2012), and mature luminal cells (Stingl et al. 2005).Several transcription factors regulated by TGF-beta signaling and implicated in epithelial-to-mesenchymal (EMT) transition, namely SNAI2, TWIST1, TWIST2, and ZEB1, a transcription factor regulated by TGF-beta signaling, has been identified as highly expressed at the mRNA (Prat et al. 2013) and protein (Morel et al. 2017) levels in MaSCs-like cells isolated from adult human breast. Based on human (Lim et al. 2010, Phillips et al. 2014) and mouse (Guo et al. 2012) studies (reviewed in Phillips and Kuperwasser 2014) SNAI2 is thought to promote stemness of MaSCs by repressing genes associated with the luminal phenotype. However, due to the role SNAI2, TWIST1, TWIST2, and ZEB1 play in EMT and wound healing, which raises the possibility that their upregulation could be the artefact of isolation or culture conditions that increase TGF-beta signaling (Lindley and Briegel 2010), they will be annotated as MaSC markers if more data becomes available.SOX family transcription factors Sox9 (Guo et al. 2012), Sox10 (Guo et al. 2012, Dravis et al. 2018), and Sox11 (Lim et al. 2010) are implicated in mouse MaSC stemness maintenance. SOX10 is also implicated in stem-like features in human breast cancer (Dravis et al. 2018). These SOX transcription factors will be annotated as human MaSC markers if more data becomes available.</p>
+        </notes>
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#metaid_5">
+              <dc:creator>
+                <rdf:Bag>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Orlic-Milacic</vCard:Family>
+                      <vCard:Given>Marija</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Qiao</vCard:Family>
+                      <vCard:Given>Jingping</vCard:Given>
+                    </vCard:N>
+                  </rdf:li>
+                  <rdf:li rdf:parseType="Resource">
+                    <vCard:N rdf:parseType="Resource">
+                      <vCard:Family>Orlic-Milacic</vCard:Family>
+                      <vCard:Given>Marija</vCard:Given>
+                    </vCard:N>
+                    <vCard:ORG rdf:parseType="Resource">
+                      <vCard:Orgname>OICR</vCard:Orgname>
+                    </vCard:ORG>
+                  </rdf:li>
+                </rdf:Bag>
+              </dc:creator>
+              <dcterms:created rdf:parseType="Resource">
+                <dcterms:W3CDTF>2024-10-26T16:02:11Z</dcterms:W3CDTF>
+              </dcterms:created>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2025-05-28T21:58:57Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <dcterms:modified rdf:parseType="Resource">
+                <dcterms:W3CDTF>2024-10-15T17:11:03Z</dcterms:W3CDTF>
+              </dcterms:modified>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-9925817" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:11519870" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:24162158" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:24124521" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:28132888" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:38289401" />
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/reactome:R-HSA-9925817" />
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isDescribedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:11599044" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:38427729" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:32457901" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:34638263" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:25117682" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:8939663" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:25482617" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:20691661" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:34295896" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:16395311" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:26783961" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:3605662" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:29720266" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:28135720" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:28394329" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:2015791" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:30174241" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:12065684" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:17724731" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:15300011" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:22385965" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:22580007" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:27550649" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:33191272" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:20506111" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:27796946" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:17785410" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:33085328" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:31519692" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:9834186" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:16420676" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:23740771" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:21425402" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:25599598" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:1989904" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:34789876" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:27217206" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:12812786" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:28886367" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:24888586" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:12434415" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:33216249" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:7600966" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:18940734" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:20660721" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:37726118" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:15886886" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:11782400" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:2472408" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:10495290" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:24936451" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:7547465" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:9727832" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:17420292" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:17258188" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:30992305" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:20078223" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:9763476" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:34203994" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:23598979" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:33082117" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:20346151" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:23643939" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:17873348" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:14708733" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:33472760" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:23782840" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:22809143" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:22426022" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:15376255" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:16397499" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:18371393" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:38045551" />
+                  <rdf:li rdf:resource="https://identifiers.org/pubmed:22647938" />
+                </rdf:Bag>
+              </bqbiol:isDescribedBy>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+        <listOfReactants>
+          <speciesReference constant="true" id="speciesreference_9925817_input_9925883" sboTerm="SBO:0000010" species="species_9925883" stoichiometry="1" />
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference constant="true" id="speciesreference_9925817_output_9925889" sboTerm="SBO:0000011" species="species_9925889" stoichiometry="1" />
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference id="modifierspeciesreference_9925817_positiveregulator_189869" sboTerm="SBO:0000459" species="species_189869">
+            <notes>
+              <p xmlns="http://www.w3.org/1999/xhtml">This describes an Event/CatalystActivity that is positively regulated by the Regulator (e.g., allosteric activation)</p>
+            </notes>
+          </modifierSpeciesReference>
+        </listOfModifiers>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

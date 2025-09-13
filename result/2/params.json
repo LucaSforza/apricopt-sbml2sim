@@ -1,0 +1,11 @@
+{
+    "kinetic_constants": {
+        "k_forcat_reaction_390470": 15.4034965771296,
+        "k_forcat_reaction_391266": 17.735803601028366,
+        "k_input_species_390455": -19.603757010378693,
+        "k_input_species_391267": -19.95570611475751,
+        "k_input_species_391287": -19.853069154850814,
+        "k_output_species_390481": 13.85295123319732,
+        "k_output_species_391256": 16.581739559187028
+    }
+}
