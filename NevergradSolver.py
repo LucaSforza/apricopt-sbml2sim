@@ -35,6 +35,8 @@ class NevergradSolver(BlackBoxSolver):
         
         permutations: list[str] = solver_params.get("permutations")
 
+        parametrization["permutation"] = NevergradSolver.Permutation(permutations)
+
         for param in black_box.get_optimization_parameters_ids():
             lower = black_box.get_optimization_parameter_lower_bound(param)        
             upper = black_box.get_optimization_parameter_upper_bound(param)
