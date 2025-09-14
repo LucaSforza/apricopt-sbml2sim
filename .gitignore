@@ -2,8 +2,6 @@ venv/
 
 log
 
-lib64/
-
 # File di output/intermediari LaTeX
 *.aux
 *.bbl
