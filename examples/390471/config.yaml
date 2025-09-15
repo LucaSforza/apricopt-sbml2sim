@@ -37,7 +37,8 @@ simulator: RoadRunner
 
 solver: openai 
 solver_parameters:
-    episodes: 50
-    population: 100
+    episodes: 10000
+    population: 200
     seed: 104
-    learning_rate: 1e-8
+    learning_rate: 5e-9
+    global_minimum: 0.0

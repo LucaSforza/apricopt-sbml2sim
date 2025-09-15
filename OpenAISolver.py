@@ -69,23 +69,32 @@ class OpenAISolver(BlackBoxSolver):
             
             print(theta)
             
-            # --- Step 1: campiona perturbazioni ---
-            epsilons = np.random.randn(N, theta.size)  # perturbazioni gaussiane
-            rewards = np.zeros(N)
-            
+            # --- Step 1: crea array vuoto e poi aggiunge le perturbazioni una ad una ---
+            epsilons = []
+            rewards_list = []
+
             # --- Step 2: valuta reward per ogni perturbazione ---
             for i in range(N):
-                policy.set_trainable_flat(theta + sigma * epsilons[i])
+                eps = np.random.randn(theta.size)  # perturbazione gaussiana per questo episodio
+                policy.set_trainable_flat(theta + sigma * eps)
                 rew, _ = policy.rollout()  # rollout ritorna np.array([reward])
                 if -rew[0] >= black_box.get_objective_upper_bound():
-                    print("[FATAL ERROR] simulator crashed")
-                    exit(1)
+                    print("[ERROR] simulator crashed")
+                    continue
                 if rew[0] > best_f:
                     print(f"New minimum!!: {-rew[0]}")
                     best_f = rew[0]
-                    best_params = theta + sigma * epsilons[i]
-                rewards[i] = rew[0]  # ES usa reward scalare
-                print(rewards[i])
+                    best_params = theta + sigma * eps
+                rewards_list.append(rew[0])  # ES usa reward scalare
+                epsilons.append(eps)
+                print(rew[0])
+
+            if len(rewards_list) == 0:
+                print("[FATAL ERROR] no canditats")
+                exit(1)
+            rewards = np.array(rewards_list)
+            epsilons = np.array(epsilons)
+
             if best_f >= -params.get("global_minimum", -math.inf):
                 break
 
