@@ -2,7 +2,7 @@ import numpy as np
 
 print("including policies...")
 
-from es_distributed.policies import Policy
+from es_distributed.my_policies import Policy
 
 from apricopt.solving.blackbox.BlackBox import BlackBox
 

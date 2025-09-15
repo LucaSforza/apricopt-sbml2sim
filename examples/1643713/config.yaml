@@ -5,8 +5,8 @@ files:
     objective: ./objective.tsv
     valori: ./vals.tsv
 horizon: 10000
-absolute_tolerance: 1.0e-12
-relative_tolerance: 1.0e-06
+absolute_tolerance: 1.0e-18
+relative_tolerance: 1.0e-12
 time_step: 10
 
 loss_functions:
@@ -19,14 +19,21 @@ loss_functions:
 
 simulator: RoadRunner
 #solver: NOMAD
-random_seed: 966294
+random_seed: 3456789
 #solver_parameters:
 #    - SEED 104
 #    - MAX_ITERATIONS 1700
 #    - NB_THREADS_PARALLEL_EVAL 1
 #    - MAX_EVAL 1700
-solver: nevergrad
+solver: openai 
 solver_parameters:
-    optimizer: NGOpt
-    budget: 200000
-    seed: 966294
+    episodes: 500
+    population: 125
+    seed: 3456789
+    learning_rate: 1e-10
+
+#solver: nevergrad
+#solver_parameters:
+#    optimizer: NGOpt
+#    budget: 300 
+#    seed: 104

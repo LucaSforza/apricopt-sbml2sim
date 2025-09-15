@@ -33,7 +33,6 @@ simulator: RoadRunner
 #solver: nevergrad 
 #random_seed: 104
 solver_parameters:
-    episodes: 10000
+    episodes: 300
     population: 50
     seed: 104
-    global_minimum: 0

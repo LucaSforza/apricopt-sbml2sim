@@ -30,5 +30,12 @@ solver_parameters:
 #solver: nevergrad
 #solver_parameters:
 #    optimizer: NGOpt
-#    budget: 100000
+#    budget: 1000
 #    seed: 104
+
+#solver: openai 
+#solver_parameters:
+#    episodes: 50
+#    population: 100
+#    seed: 104
+#    learning_rate: 0.01

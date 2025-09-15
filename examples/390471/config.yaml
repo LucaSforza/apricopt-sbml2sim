@@ -4,10 +4,10 @@ files:
     objective: ./objective.tsv
     # ordinamento: ./ord.tsv
     valori: ./vals.tsv
-horizon: 10000
+horizon: 5000
 absolute_tolerance: 1.0e-12
 relative_tolerance: 1.0e-06
-time_step: 10
+time_step: 0.5
 
 loss_functions:
     stability:
@@ -29,8 +29,15 @@ simulator: RoadRunner
 #    - NB_THREADS_PARALLEL_EVAL 1
 #    - MAX_EVAL 150000
 
-solver: nevergrad
+#solver: nevergrad
+#solver_parameters:
+#    optimizer: DE
+#    budget: 100000
+#    seed: 104
+
+solver: openai 
 solver_parameters:
-    optimizer: DE
-    budget: 100000
+    episodes: 50
+    population: 100
     seed: 104
+    learning_rate: 1e-8
