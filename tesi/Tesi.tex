@@ -28,6 +28,8 @@
 % Miei include
 \usepackage{amsfonts} 
 \usepackage{amsmath}
+\usepackage{algpseudocode}
+\usepackage{algorithm}
 
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
@@ -52,13 +54,13 @@
 \setcitestyle{super,open={(},close={)}}
 
 \hypersetup{pdftitle={TITOLO TESI}, pdfauthor={Luca Sforza}}
-\title{Simulazione di Modelli Biologici riguardanti varie forme del carcinoma}
+\title{Un tool per la ricerca di virtual patient in biomchemical network}
 \author{Luca Sforza}
 \IDnumber{2050030}
 \course{Laurea triennale in Informatica}
 \courseorganizer{Facoltà di Ingegneria dell'informazione, informatica e statistica} % TODO: controllare
 \AcademicYear{2024/2025}
-\advisor{Dott. Enrico Tronci}
+\advisor{Prof. Enrico Tronci}
 \customadvisorlabel{Relatore}
 %\coadvisor{Dott.ssa Nome Cognome}
 %\customcoadvisorlabel{Correlatrice}
@@ -66,7 +68,7 @@
 %\customdirectorlabel{Specializzando\\Responsabile della ricerca}
 \authoremail{sforza.2050030@studenti.uniroma1.it}
 \copyyear{2025}
-\thesistype{Tesi sperimentale}
+\thesistype{Relazione di Tirocinio}
 \examdate{24 Gennaio 2024} % TODO: boh
 \examiner{Prof. Tizio} 
 \examiner{Prof. Caio} 
@@ -84,7 +86,7 @@
 \makeglossaries
 \input{glossario}
 
-\includeonly{Cap_1,Cap_2,Cap_3,Cap_4,Cap_5}
+\includeonly{Cap_1,Cap_2,Cap_3,Cap_4,Cap_5, tool}
 \newcommand{\Fig}[1]{[{\footnotesize \texttt{Fig.#1}}]}
 \newcommand{\citfig}[1]{\ap{\scriptsize\textrm{(\textit{F#1})}}}
 
@@ -111,6 +113,7 @@
 \include{Cap_1}
 \include{Cap_2}
 \include{Cap_3}
+\include{tool}
 \include{Cap_4}
 \include{Cap_5}
 

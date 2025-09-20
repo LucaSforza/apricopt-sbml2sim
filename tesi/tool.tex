@@ -1,0 +1,53 @@
+\chapter{Progettazione del tool}
+
+%TODO: dire meglio che fa rate, far mostrare il grafico UML prima mostrandolo a pezzi
+
+% TODO: sistemare UML e mostrare pezzo per pezzo cosa fa
+
+In Figura \ref{fig:uml} è mostrato il diagramma UML che evidenzia le componenti centrali del tool che si appoggia al framework apricopt.
+
+Apricopt ha delle interfaccie che permettono di modellare problemi di ottimizzazione BlackBox, in particolare quei problemi che richiedono la simulazione di un modello biologico.
+
+Al centro del framework è il BlackBoxSolver, che ha il compito di cercare i parametri ottimali.
+
+Esso è un interfaccia, una classe può essere estesa ad essa per implementare un algoritmo di ottimizzazione, per esempio per quanto riguarda l'algoritmo evolutivo di OpenAI. Oppure si possono usare ottimizzatori terzi come Nevergrad o Nomad.
+
+I problemi black box che stiamo considerando sono la stima dei parametri di un dato modello biologico.
+
+La loss function $\mathcal{L}$ 
+può essere passata attraverso 
+SimulableBlackBox che simula 
+il modello con i parametri 
+$ \theta $  e calcola 
+$\mathcal{L}(\theta,\mathcal{T}(\theta))$.
+
+
+% TODO: reimpementa questo algoritmo con gli oggetti UML
+
+\section{Algoritmo}
+\begin{algorithm}
+\caption{An algorithm with caption}\label{alg:cap}
+\begin{algorithmic}[1]
+\State $R \subseteq [1,n]^2,\; R\ \text{è una relazione d'ordine sulle specie}$
+\State $B \in \mathbb{R} \text{ è il target}$
+\State $\text{optimizer } \gets \text{ una qualsiasi classe che estende BlackBoxSolver}$
+\While{$i \in 1..*$}
+    \State $\theta \gets \text{ optimizer.ask()}$
+    \State Sia $\mathcal{T}(\theta)$ la traiettoria del sistema
+    \If{$\mathcal{L}(\theta,\mathcal{T}(\theta)) \leq B$}
+        \Return{$\theta$}
+    \EndIf
+    \State $\text{optimizer.tell}(\theta, \mathcal{L}(\theta))$
+\EndWhile
+\end{algorithmic}
+\end{algorithm}
+
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.75\textwidth]{analisi.png}%
+    \caption{UML}
+    \label{fig:uml}
+\end{figure}
+
+
