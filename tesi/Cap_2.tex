@@ -15,11 +15,13 @@ Sia \(m\) il numero di reazioni nel modello.
 
 Per ogni specie \(x_i\) definiamo
 $R_{x_i} \subseteq \{1,\dots,m\}\quad\text{(reazioni in cui \(x_i\) è reattante)}$,
-$P_{x_i} \subseteq \{1,\dots,m\}\quad\text{(reazioni che producono \(x_i\))}.$
+$P_{x_i} \subseteq \{1,\dots,m\}\quad\text{(reazioni che producono \(x_i\))}$, 
+
+$n^i_j$ è la stochiometria della specie $i$ nella reazione $j$.
 
 Se \(R_{x_i}\neq\emptyset\) e \(P_{x_i}\neq\emptyset\), l'evoluzione temporale di \(x_i\) è data da:
 \[
-\frac{dx_i}{dt}=\sum_{j\in P_{x_i}} v_j(t) - \sum_{j\in R_{x_i}} v_j(t),
+\frac{dx_i}{dt}=\sum_{j\in P_{x_i}} n^i_j v_j(t) - \sum_{j\in R_{x_i}} n_j^i v_j(t),
 \]
 dove \(v_j(t)\) è la velocità della reazione \(j\).
 
@@ -71,7 +73,7 @@ Esse non vengono prodotte da reazioni (\(P_{x_i}=\emptyset\)) ma vengono immesse
 \]
 
 I pathway hanno degli output che sono specie che vengono prodotte ma non consumate (\(R_{x_i}=\emptyset\)); ad esse si aggiunge una reazione di degradazione, che avrà una constante cinetica e ha come unico reattante
-la concentrazione dell'output stesso, quindi seguendo la mass action rule l'equazione differenziale per gli output è come segue:
+la concentrazione dell'output stesso, quindi seguendo la mass action rule \cite{klipp2009systems} l'equazione differenziale per gli output è come segue:
 \[
 \frac{dx_i}{dt}=\sum_{j\in P_{x_i}} v_j(t) - k_{\mathrm{out},i}\,x_i(t),
 \]

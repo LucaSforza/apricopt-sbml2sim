@@ -1,0 +1,78 @@
+\chapter{Algoritmo genetico OpenAI}
+
+Il tool progettato permette di eseguire l'ottimizzazione della funzione obbiettivo $\mathcal{L}$
+tramite diversi ottimizzatori come Nevergrad e Nomad. Però può essere facilmente esteso per includere diversi
+algoritmi.
+
+In questa relazione di tirocinio si propone l'implementazione di un algoritmo genetico di OpenAI per risolvere problemi
+blackbox.
+
+Un algoritmo genetico è una procedure di ricerca euristica ispirate all'evoluzione naturale osservabile in natura.
+
+Ad ogni iterazione dell'algoritmo (generazione) un insieme di parametri (genotipi) che vengono perturbati (mutazione genetica) e la funzione obbiettivo
+viene valutata su queste perturbazioni (fitness).
+
+Le perturbazioni con la fitness migliori vengono ricombinate per formare i nuovi parametri per la nuova generazione.
+
+In questo algoritmo di OpenAI la popolazione viene rappresentata come una distribuzione gaussiana multivariata che ha media sui parametri.
+
+Quindi si voglio trovare i parametri che  massimizzano:
+
+\begin{equation}
+    \mathbb{E}_{\varepsilon \sim \mathcal{N}(0,I)} \{ \mathcal{L}(\theta + \sigma \varepsilon) \}
+\end{equation}
+
+Possiamo ottimizzare i parametri $\theta$ usando un gradient descend stocastico, vedere la figura \ref{gradient_descend} per una visualizzazione grafica del funzionamento.
+
+\begin{equation}
+    \nabla_{\theta} \mathbb{E}_{\varepsilon \sim \mathcal{N}(0,I)} \{ \mathcal{L}(\theta + \sigma \varepsilon) \} = -\frac{1}{\sigma} \mathbb{E}_{\varepsilon \sim \mathcal{N}(0,I)} \{ \mathcal{L}(\theta + \sigma \varepsilon) \varepsilon \}
+\end{equation}
+
+
+Esso può essere stimato campionando $n$ valori $\varepsilon_1, \dots, \varepsilon_n \sim \mathcal{N}(0,I)$.
+
+\begin{equation}
+    -\frac{1}{\sigma} \mathbb{E}_{\varepsilon \sim \mathcal{N}(0,I)} \{ \mathcal{L}(\theta + \sigma \varepsilon) \varepsilon \} \approx -\frac{1}{\sigma n} \sum_{i=1}^n \mathcal{L}(\theta + \sigma \varepsilon_i) \varepsilon_i
+\end{equation}
+
+Ad ogni generazione i nuovi parametri si spostano in direzione del gradiente.
+
+Poiche il gradiente può essere molto lungo esso va scalato per un iper-parametro dell'algoritmo $\alpha > 0$ chiamato \textbf{learning rate}.
+
+\begin{figure}
+\centering
+    \begin{tikzpicture}
+    \begin{axis}[width=12cm,%
+        declare function={f(\x,\y)=cos(deg(\x)*0.8)*cos(deg(\y)*0.6)*exp(0.1*\x);}]
+    \addplot3[surf,shader=interp,domain=-4:4,%samples=81
+    ]{f(x,y)};
+    \edef\myx{0.15} % first x coordinate
+    \edef\myy{-0.15} % first y coordinate
+    \edef\mystep{-2}% negative values mean descending
+    \pgfmathsetmacro{\myf}{f(\myx,\myy)}
+    \edef\lstCoords{(\myx,\myy,\myf)}
+    \pgfplotsforeachungrouped\X in{0,...,5}
+    {
+    \pgfmathsetmacro{\myx}{\myx+\mystep*xgrad(\myx,\myy)}
+    \pgfmathsetmacro{\myy}{\myy+\mystep*ygrad(\myx,\myy)}
+    \pgfmathsetmacro{\myf}{f(\myx,\myy)}
+    \edef\lstCoords{\lstCoords\space (\myx,\myy,\myf)}
+    }
+    \addplot3[samples y=0,arrowed] coordinates \lstCoords;
+    \end{axis}
+    \end{tikzpicture}
+\caption{Visualizzazione del gradient descend}
+\label{gradient_descend}
+\end{figure}
+
+    
+\begin{algorithm}
+\caption{OpenAI Algoritmo Evolutivo Genetico}\label{alg:openai_algo}
+\begin{algorithmic}[1]
+\State \textbf{Input: } Learning rate $\alpha$, deviazione standard $\sigma$, parametri iniziali: $\theta_0$
+\For{$t = 0, 1, 2, \dots$}
+    \State Campiona $\varepsilon_1, \dots, \varepsilon_n \sim \mathcal{N}(0,I)$
+    \State $\theta_{t+1} \gets \theta_t - \alpha \frac{1}{\sigma n} \sum_{i=1}^n \mathcal{L}(\theta_t + \sigma \varepsilon_i) \varepsilon_i$
+\EndFor
+\end{algorithmic}
+\end{algorithm}

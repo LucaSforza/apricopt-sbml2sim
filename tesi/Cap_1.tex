@@ -11,13 +11,23 @@ Una cellula nella sua interezza è un sistema biologico governato da reti comple
 
 Tuttavia si possono studiare solo piccoli parti di questi network metabolici, ovvero i pathway che vanno a studiare una specifica funzione di una cellula. 
 
+Un modello biologico è formato da molecole e reazioni come mostrato in figura \ref{fig:paziente_virtuale}. 
+
 Esistono online database di pathway che possono essere resi simulabili modellando le reazioni come equazioni differenziali ordinarie (ODE).
+
+Per questo tirocinio è stato utilizzato reactome \cite{milacic2024reactome}.
 
 L'accuratezza di queste simulazioni dipende in modo cruciale dalle costanti cinetiche che governano le reazioni. Tali parametri risultano spesso difficili o impossibili da misurare sperimentalmente, lasciando un ampio margine di incertezza nei modelli.
 
 Però esiste il concetto di \textbf{paziente virtuale} inteso come una collezione di
 modelli computazionali che rappresentano diversi possibili scenari biologici compatibili con le conoscenze disponibili.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{R-HSA-5676934.png}
+    \caption{Rappresentazione schematica di un modello bioligico. Le freccie sono le reazioni che collegano i reattanti con i prodotti delle reazioni.}
+    \label{fig:paziente_virtuale}
+\end{figure}
 
 \section{Contributi}
 
@@ -33,7 +43,12 @@ In particolare, il lavoro introduce un framework computazionale per l'esplorazio
 
 \section{Stato dell'arte}
 
-% TODO: prendere paper dati dal prof e spiegare cosa solo le boolean network e perché il nostro approccio invece è più coerente
+% TODO: mettere riferimenti al paper 
+
+Un approccio alternativo alla simulazione dei sistemi biologici con equazioni differenziali è quello basato sui network booleani \cite{boolean_network1} \cite{boolean_network2} \cite{boolean_network3}. In questo caso, le reazioni biochimiche sono fortemente semplificate: ogni proteina può essere soltanto attiva o inattiva e le interazioni sono ridotte a regole logiche. Spesso si assume che tutte le reazioni avvengano alla stessa velocità e che i nodi della rete possano cambiare stato in maniera sincrona. In alcuni modelli, si ipotizza persino che durante la simulazione la velocità relativa delle reazioni possa variare, ma questa assunzione non è coerente con i vincoli fisici: se una reazione è intrinsecamente veloce, lo rimane, e non può diventare lenta.
+
+In questa relazione di tirocinio si adotta invece un approccio differente: la dinamica delle reti biochimiche viene descritta tramite equazioni differenziali ordinarie, che permettono di rispettare i vincoli quantitativi e temporali delle reazioni chimiche.
+
 
 \section{Struttura della Relazione di Tirocinio}
 

@@ -4,6 +4,8 @@
 
 % TODO: sistemare UML e mostrare pezzo per pezzo cosa fa
 
+% TODO: citare il paper di libRoadRunner
+
 In Figura \ref{fig:uml} è mostrato il diagramma UML che evidenzia le componenti centrali del tool che si appoggia al framework apricopt.
 
 Apricopt ha delle interfaccie che permettono di modellare problemi di ottimizzazione BlackBox, in particolare quei problemi che richiedono la simulazione di un modello biologico.
@@ -19,33 +21,42 @@ può essere passata attraverso
 SimulableBlackBox che simula 
 il modello con i parametri 
 $ \theta $  e calcola 
-$\mathcal{L}(\theta,\mathcal{T}(\theta))$.
+$\mathcal{L}(\theta,\mathcal{T}(\theta))$ dove $\mathcal{T}(\theta)$ è la traiettoria del sistema con i parametri $\theta$.
+
+Si può specificare un valore $B$ tale per cui se vengono trovati dei parametri tale che $\mathcal{L}(\theta) \leq B$ allora i parametri sono sufficientemente buoni.
+
+Nell'algoritmo \ref{alg:cap} si può vedere l'implementazione di NevergradSolver.
+
+Per la classe OpenAISolver viene sovrascritto il metodo solve con l'algoritmo \ref{alg:openai_algo} dove i suoi iperparametri vengono
+presi dal SolverParameters.
 
 
-% TODO: reimpementa questo algoritmo con gli oggetti UML
+% TODO: descrivere l'interfaccia di Nevergrad
+% TODO: spiegare che anche la classe OpenAISolver ha l'algoritmo descritto nel capitolo precedente
+% dove prende gli iperparametri da params
 
-\section{Algoritmo}
 \begin{algorithm}
-\caption{An algorithm with caption}\label{alg:cap}
+\caption{Metodo solve sovrascritto dalla classe Nevergrad solver}\label{alg:cap}
 \begin{algorithmic}[1]
-\State $R \subseteq [1,n]^2,\; R\ \text{è una relazione d'ordine sulle specie}$
-\State $B \in \mathbb{R} \text{ è il target}$
-\State $\text{optimizer } \gets \text{ una qualsiasi classe che estende BlackBoxSolver}$
+\State \textbf{Input:} problem: BlackBox, params: SolverParameters
+\State $\text{optimizer } \gets \text{ algoritmo presente in Nevergrad preso dai params}$
+\State $B \gets$ minimo preso dai parametri params
 \While{$i \in 1..*$}
     \State $\theta \gets \text{ optimizer.ask()}$
-    \State Sia $\mathcal{T}(\theta)$ la traiettoria del sistema
-    \If{$\mathcal{L}(\theta,\mathcal{T}(\theta)) \leq B$}
+    \State val $\gets$ problem.evaluate($\theta$) 
+    \If{val $\leq B$}
         \Return{$\theta$}
     \EndIf
-    \State $\text{optimizer.tell}(\theta, \mathcal{L}(\theta))$
+    \State $\text{optimizer.tell}(\theta, val)$
 \EndWhile
 \end{algorithmic}
 \end{algorithm}
 
+% TODO: spiegare l'ordinamento delle specie
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.75\textwidth]{analisi.png}%
+    \includegraphics[width=1\textwidth]{analisi.png}%
     \caption{UML}
     \label{fig:uml}
 \end{figure}
