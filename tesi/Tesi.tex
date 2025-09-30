@@ -7,7 +7,7 @@
 %Qui tutto ciò che c’ è da saper su LaTeX: http://www.lorenzopantieri.net/LaTeX_files/ArteLaTeX.pdf 
 %Per scrivere la bibliografia puoi vedere il seguente link: https://www.guitex.org/home/images/doc/GuideGuIT/bibliografia.pdf
 
-\documentclass[a4paper, oneside]{sapthesis}
+\documentclass[a4paper, oneside, noexaminfo]{sapthesis}
 
 %qui ci sono svariati pacchetti utili per far funzionare il programma
 \usepackage{microtype}
@@ -86,8 +86,8 @@ dx/.initial=0.01,dy/.initial=0.01}
 \bibliographystyle{plainyr-rev} %la bibiografia ordinata in ordine di data dalla più recente
 \setcitestyle{super,open={(},close={)}}
 
-\hypersetup{pdftitle={TITOLO TESI}, pdfauthor={Luca Sforza}}
-\title{Un tool per la ricerca di virtual patient in biomchemical network}
+\hypersetup{pdftitle={Un tool per la ricerca di virtual patients in biomchemical network}, pdfauthor={Luca Sforza}}
+\title{Un tool per la ricerca di virtual patients in biomchemical network}
 \author{Luca Sforza}
 \IDnumber{2050030}
 \course{Laurea triennale in Informatica}
@@ -102,14 +102,7 @@ dx/.initial=0.01,dy/.initial=0.01}
 \authoremail{sforza.2050030@studenti.uniroma1.it}
 \copyyear{2025}
 \thesistype{Relazione di Tirocinio}
-\examdate{24 Gennaio 2024} % TODO: boh
-\examiner{Prof. Tizio} 
-\examiner{Prof. Caio} 
-\examiner{Prof. Sempronio}  
-\examiner{Prof. ...}  
-\examiner{Prof. ...} 
-\examiner{Prof. ...}  
-\examiner{Prof. ...} 
+
 
 %In caso di titoli di section a 2 righe
 %\setlength{\headheight}{22.59052pt}
@@ -133,7 +126,6 @@ dx/.initial=0.01,dy/.initial=0.01}
 \end{flushright}
 }
 
-\input{abstract}
 \tableofcontents
 \listoffigures
 \listoftables
@@ -164,6 +156,8 @@ dx/.initial=0.01,dy/.initial=0.01}
 %\addcontentsline{toc}{chapter}{\indexname}
 %\printindex
 
+\input{ringraziamenti}
+
 \newpage
 \phantomsection
 \addcontentsline{toc}{chapter}{\bibname}
@@ -173,6 +167,5 @@ dx/.initial=0.01,dy/.initial=0.01}
 \phantomsection
 \addcontentsline{toc}{section}{Figure}
 
-\input{ringraziamenti}
 
 \end{document}

@@ -43,12 +43,11 @@ In particolare, il lavoro introduce un framework computazionale per l'esplorazio
 
 \section{Stato dell'arte}
 
-% TODO: mettere riferimenti al paper 
+% TODO: mettere riferimento ad equazioni differenziali
 
-Un approccio alternativo alla simulazione dei sistemi biologici con equazioni differenziali è quello basato sui network booleani \cite{boolean_network1} \cite{boolean_network2} \cite{boolean_network3}. In questo caso, le reazioni biochimiche sono fortemente semplificate: ogni proteina può essere soltanto attiva o inattiva e le interazioni sono ridotte a regole logiche. Spesso si assume che tutte le reazioni avvengano alla stessa velocità e che i nodi della rete possano cambiare stato in maniera sincrona. In alcuni modelli, si ipotizza persino che durante la simulazione la velocità relativa delle reazioni possa variare, ma questa assunzione non è coerente con i vincoli fisici: se una reazione è intrinsecamente veloce, lo rimane, e non può diventare lenta.
+L'approccio di usare equazioni differenziali per modellare sistemi biochimici è una pratica molto diffusa nella letteratura. La dinamica delle reti biochimiche viene descritta tramite equazioni differenziali ordinarie, che permettono di rispettare i vincoli quantitativi e temporali delle reazioni chimiche.
 
-In questa relazione di tirocinio si adotta invece un approccio differente: la dinamica delle reti biochimiche viene descritta tramite equazioni differenziali ordinarie, che permettono di rispettare i vincoli quantitativi e temporali delle reazioni chimiche.
-
+Invece un approccio alternativo alla simulazione dei sistemi biologici con equazioni differenziali è quello basato sui network booleani \cite{boolean_network1} \cite{boolean_network2} \cite{boolean_network3}. In questo caso, le reazioni biochimiche sono fortemente semplificate: ogni proteina può essere soltanto attiva o inattiva e le interazioni sono ridotte a regole logiche. Spesso si assume che tutte le reazioni avvengano alla stessa velocità e che i nodi della rete possano cambiare stato in maniera sincrona. In alcuni modelli, si ipotizza persino che durante la simulazione la velocità relativa delle reazioni possa variare, ma questa assunzione non è coerente con i vincoli fisici: se una reazione è intrinsecamente veloce, lo rimane, e non può diventare lenta.
 
 \section{Struttura della Relazione di Tirocinio}
 

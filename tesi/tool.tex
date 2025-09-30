@@ -1,11 +1,5 @@
 \chapter{Progettazione del tool}
 
-%TODO: dire meglio che fa rate, far mostrare il grafico UML prima mostrandolo a pezzi
-
-% TODO: sistemare UML e mostrare pezzo per pezzo cosa fa
-
-% TODO: citare il paper di libRoadRunner
-
 In Figura \ref{fig:uml} è mostrato il diagramma UML che evidenzia le componenti centrali del tool che si appoggia al framework apricopt.
 
 Apricopt ha delle interfaccie che permettono di modellare problemi di ottimizzazione BlackBox, in particolare quei problemi che richiedono la simulazione di un modello biologico.
@@ -21,19 +15,24 @@ può essere passata attraverso
 SimulableBlackBox che simula 
 il modello con i parametri 
 $ \theta $  e calcola 
-$\mathcal{L}(\theta,\mathcal{T}(\theta))$ dove $\mathcal{T}(\theta)$ è la traiettoria del sistema con i parametri $\theta$.
+$\mathcal{L}(\theta)$ sulla base della traiettria $\mathcal{T}(\theta)$.
 
-Si può specificare un valore $B$ tale per cui se vengono trovati dei parametri tale che $\mathcal{L}(\theta) \leq B$ allora i parametri sono sufficientemente buoni.
+Per calcolare la traiettoria è necessario poter simulare il modello. Per fare ciò apricopt ha diversi simulatori utilizzabili.
+
+
+Per gli esempi mostrati in questa relazione di tirocinio è stato utilizzato roadrunner \cite{welsh2023libroadrunner}. Dal'UML in figura si può vedere come 
+il simulatore è una classe astratta. Oltre al simulatore è necessario implementare l'istanza di un modello roadrunner.
+
+Si può specificare anche un valore $B$ tale per cui se vengono trovati dei parametri tale che $\mathcal{L}(\theta) \leq B$ allora i parametri sono sufficientemente buoni.
 
 Nell'algoritmo \ref{alg:cap} si può vedere l'implementazione di NevergradSolver.
 
 Per la classe OpenAISolver viene sovrascritto il metodo solve con l'algoritmo \ref{alg:openai_algo} dove i suoi iperparametri vengono
-presi dal SolverParameters.
+presi dai SolverParameters.
 
+Un problema di ottimizzazione con questo tool può essere descritto usando YAML rendendo facile generare automaticamente questi problemi.
 
-% TODO: descrivere l'interfaccia di Nevergrad
-% TODO: spiegare che anche la classe OpenAISolver ha l'algoritmo descritto nel capitolo precedente
-% dove prende gli iperparametri da params
+Un esempio è mostrato in figura \ref{fig:yaml}.
 
 \begin{algorithm}
 \caption{Metodo solve sovrascritto dalla classe Nevergrad solver}\label{alg:cap}
@@ -52,7 +51,41 @@ presi dal SolverParameters.
 \end{algorithmic}
 \end{algorithm}
 
-% TODO: spiegare l'ordinamento delle specie
+\begin{figure}
+    \begin{verbatim}
+files:
+    model: ./converted_R-HSA-169911.sbml
+    parameters: ./parameters.tsv
+    objective: ./objective.tsv
+    constrains: ./constrains.tsv
+    valori: ./vals.tsv
+horizon: 10000
+absolute_tolerance: 1.0e-12
+relative_tolerance: 1.0e-06
+time_step: 10
+
+loss_functions:
+    stability:
+        scale: 10000
+    transitorial:
+        scale: 10
+    value:
+        scale: 1
+
+simulator: RoadRunner
+random_seed: 104 
+solver: NOMAD
+solver_parameters:
+    - SEED 104
+    - MAX_ITERATIONS 100000
+    - NB_THREADS_PARALLEL_EVAL 1
+    - MAX_EVAL 1500000
+
+    \end{verbatim}
+\caption{Esempio di una possibile descrizione di un problema di ottimizzazione usando YAML.}
+\label{fig:yaml}
+\end{figure}
+
 
 \begin{figure}[htbp]
     \centering
@@ -62,3 +95,74 @@ presi dal SolverParameters.
 \end{figure}
 
 
+\section{Conversione da modello qualitativo a quantitativo}
+
+Oltre a ciò il tool può prendere un modello da Reactome \cite{milacic2024reactome} e renderlo simulabile.
+
+Reactome è un database di pathway biologici qualitativi.
+
+Un modello qualitativo ha come obiettivo non quello di essere simulabile, ma quello di descrivere il
+modello biologico, quindi mancano tutte le informazioni quantitative, ovvero per quanto
+riguarda le reazioni mancano le leggi cinetiche, per i vari compartimenti non è specificato il loro
+volume, non sono specificate le unità di misura e non sono specificate le concentrazioni iniziali delle
+specie.
+
+Per il progetto di Verifica e Validazione dei Sistemi Intellingenti, su cui si basa il tirocinio, è stata implementata
+la conversione da modello qualitativo a modello quantitativo.
+
+I modelli di Reactome sono descritti usando SBML \cite{hucka2003sbml} , il tool prende questa descrizione ed aggiunte tutte le informazioni mancanti
+per rendere il modello simulabile.
+
+Nella figura \ref{fig:sbml} è riportato un esempio minimale di file SBML (Level 3 Version 1). Questo file può essere preso in input dal tool e arricchito con le informazioni quantitative necessarie (leggi cinetiche, volumi, unità, concentrazioni iniziali, parametri, ecc.).
+\begin{figure} 
+\begin{verbatim}
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" level="2" version="4">
+  <model id="minimal_degradation" name="Minimal degradation model">
+    <listOfCompartments>
+      <compartment id="cell" constant="true"/>
+    </listOfCompartments>
+
+    <listOfSpecies>
+      <species id="S" compartment="cell" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+
+    <listOfParameters>
+      <parameter id="k_deg" value="0.1" constant="true"/>
+    </listOfParameters>
+
+    <listOfReactions>
+      <reaction id="deg_S" reversible="false" fast="false">
+        <listOfReactants>
+          <speciesReference species="S" stoichiometry="1" constant="true"/>
+        </listOfReactants>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply><times/><ci>k_deg</ci><ci>S</ci></apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
+\end{verbatim}
+\caption{Esempio di modello SBML quantitativo generato dal tool}
+\label{fig:sbml}
+\end{figure}
+
+
+
+\section{Ordinamento delle specie e plausibilità del modello}
+
+L'obbiettivo del tirocinio è quello di trovare l'ordinamento delle specie che è più plausibile
+all'interno di un modello biologico.
+
+Questo viene fatto eseguendo una ricerca dei parametri secondo un certo ordinamento.
+
+% TODO: mettere riferimento a questa cosa dall'analisi.
+
+Il tool permette di creare un problema di ottimizzazione secondo un certo ordinamento delle specie come descritto nella sezione %TODO
+.
+
+Oppure si possono generare tutti gli ordinamenti possibili e cercare i parametri
+per ognuno dei suoi ordinamenti così da trovare l'ordinamento più plausibile.

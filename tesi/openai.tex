@@ -1,5 +1,7 @@
 \chapter{Algoritmo genetico OpenAI}
 
+% TODO: riferimento al paper di OpenAI
+
 Il tool progettato permette di eseguire l'ottimizzazione della funzione obbiettivo $\mathcal{L}$
 tramite diversi ottimizzatori come Nevergrad e Nomad. Però può essere facilmente esteso per includere diversi
 algoritmi.
@@ -72,7 +74,8 @@ Poiche il gradiente può essere molto lungo esso va scalato per un iper-parametr
 \State \textbf{Input: } Learning rate $\alpha$, deviazione standard $\sigma$, parametri iniziali: $\theta_0$
 \For{$t = 0, 1, 2, \dots$}
     \State Campiona $\varepsilon_1, \dots, \varepsilon_n \sim \mathcal{N}(0,I)$
-    \State $\theta_{t+1} \gets \theta_t - \alpha \frac{1}{\sigma n} \sum_{i=1}^n \mathcal{L}(\theta_t + \sigma \varepsilon_i) \varepsilon_i$
+    \State Calcola funzione di loss $\mathcal{L}_i = \mathcal{L}(\theta_t + \sigma \varepsilon_i)$ \textbf{for} $i \in [1,n]$
+    \State $\theta_{t+1} \gets \theta_t - \alpha \frac{1}{\sigma n} \sum_{i=1}^n  \mathcal{L}_i \varepsilon_i$
 \EndFor
 \end{algorithmic}
 \end{algorithm}
