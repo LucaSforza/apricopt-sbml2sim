@@ -159,12 +159,12 @@ Altri vincoli da aggiungere sono vincolare il valore medio di una concentrazione
 
 Supponiamo di avere un dataset:
 \[
-    \mathcal{D} = \{ y_i \in [0,1] \mid y_i \text{ è la concentrazione media osservata della specie i}\}.
+    \mathcal{D} = \{ (i,y) \in [1,n] \times [0,1] \mid y \text{ è la concentrazione media osservata della specie }i\}.
 \]
 
-Un modo per vincolare i parametri a questi dati è massimizzando la \textbf{likehood} \cite{Simpson2025} dei parametri.
+Un modo per vincolare i parametri a questi dati è massimizzando la \textbf{likelihood} \cite{Simpson2025} dei parametri.
 
-La likehood è la probabilità condizionata di osservate dal modello
+La likelihood è la probabilità condizionata di osservate dal modello
 il dato osservato se il modello è corretto.
 
 Più formalmente:
@@ -173,7 +173,7 @@ Più formalmente:
     L(\theta \mid \mathcal{D}) = \mathbb{P}(\mathcal{D} \mid \theta)
 \end{equation}
 
-Quindi i parametri da scegliere devono essere quelli che massimizzano la likehood.
+Quindi i parametri da scegliere devono essere quelli che massimizzano la likelihood.
 
 \begin{equation}
     \hat{\theta}(\mathcal{D}) = \arg\max_{\theta} L(\theta \mid \mathcal{D})
@@ -185,16 +185,16 @@ I dati osservati $\mathcal{D}$ per ipotesi devono provenire da repliche sperimen
 \[
 y_i = \tilde{x}_i(T,\theta) + \varepsilon_i,\qquad \varepsilon_i \sim \mathcal{N}(0,\sigma_i^2),
 \]
-dove \(\sigma_i^2\) è la varianza dell'errore per la specie \(i\). Sotto questa ipotesi la log-likehood del dataset è
+dove \(\sigma_i^2\) è la varianza dell'errore per la specie \(i\). Sotto questa ipotesi la log-likelihood del dataset è
 \[
-\log L(\theta\mid\mathcal{D}) = -\frac{1}{2}\sum_{ y_i\in\mathcal{D}}\left[\frac{(y-\tilde{x}_i(T,\theta))^2}{\sigma_i^2} + \log(2\pi\sigma_i^2)\right].
+\log L(\theta\mid\mathcal{D}) = -\frac{1}{2}\sum_{ (i,y) \in\mathcal{D}}\left[\frac{(y-\tilde{x}_i(T,\theta))^2}{\sigma_i^2} + \log(2\pi\sigma_i^2)\right].
 \]
 La stima dei parametri si ottiene massimizzando questa funzione (o minimizzando la somma dei residui normalizzati).
 
 Quindi definiamo una nuova funziona da minimizzare $\mathcal{L}_4$.
 
 \begin{equation}
-    \mathcal{L}_4(\theta) = \sum_{y_i \in \mathcal{D}} (y_i - \tilde{x}_i(T,\theta))^2
+    \mathcal{L}_4(\theta) = \sum_{(i,y) \in \mathcal{D}} (y_i - \tilde{x}_i(T,\theta))^2
 \end{equation}
 
 Come ultima funzione da definire è una per gestire gli errori numerici. Se la scelta delle costanti cinetiche è troppo sbagliata le specie potrebbero molto velocemente divergere a $+\infty$.
@@ -214,24 +214,24 @@ La funzione finale da minimizzare è:
     \mathcal{L}(\theta) = \alpha \cdot \mathcal{L}_1(\theta) + \beta \cdot \mathcal{L}_2(\theta) + \gamma \cdot \mathcal{L}_3(\theta) + \zeta \cdot \mathcal{L}_4(\theta) + \mathcal{L}_5(\theta)
 \end{equation}
 
-Dove $\alpha, \beta , \gamma, \zeta \in \mathbb{R}$ sono degli iperparametri dell'ottimizzatore per scalare
-le varie funzioni a seconda se vogliamo vincolare di più l'aderenza ai dati sperimentali ($\gamma$ o $\zeta$) oppure la stabilità.
+Dove $\alpha, \beta , \gamma, \zeta \in \mathbb{R}$ sono degli iper-parametri dell'ottimizzatore per scalare
+le varie funzioni, a seconda se vogliamo vincolare di più l'aderenza ai dati sperimentali ($\gamma$ o $\zeta$) oppure la stabilità.
 
-\section{Come trovare i parametri}
+\section{Ordinamenti delle specie plausibili}
 
-Per trovare i parametri è equivalente a dire che:
+% TODO:
+
+Dato che stiamo lavorando in un ambiente normalizzato allora possiamo
+cercare di capire se un certo ordinamento delle specie è plausibile o meno.
+
+Un ordinamento lo possiamo vedere come una permutazione sulle specie $\pi: [1,n] \rightarrow [1,n]$
 
 \begin{equation}
-    \mathcal{S} = \arg\max_{\theta} \mathcal{L}(\theta)
+    \mathcal{D} = \left\{ \left( i,\frac{\pi(i)}{n+1} \right) \mid i \in [1,n]\right\},
 \end{equation}
 
-Dato che il dominio dei parametri è discrito potremmo poter trovare tutti i possibili parametri che rispettano i vincoli, ovvero tale per cui 
-$\mathcal{L}(\theta) <= \epsilon$ dove $\epsilon > 0$ molto piccolo.
+Vincoliamo le concentrazioni delle specie con valori normalizzati tra 0 e 1.
 
-Se i parametri da cercare sono molto pochi allora si può provare a cercare tutte le soluzioni possibili.
-
-Altrimenti si può utilizzare il risultato ottenuto dal progetto di \textbf{intelligenza artificiale} per trovare
-tramite ottimizzazione black box i parametri migliori, anche se la differenza è che qua operiamo nel discreto e non con parametri continui.
-
+Per capire quale ordinemto sia più plausibile di un altro possiamo confrontare l'ottimizzazione della funzione rispetto a due permutazioni diverse.
 
 

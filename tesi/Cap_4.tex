@@ -1,7 +1,7 @@
 \chapter{Esempi di modelli}
 
 
-\section{Cellule staminali mammarie}
+\section{Cellule staminali mammarie (R-HSA-9938206)}
 
 \begin{figure}[htbp]
     \centering
@@ -22,13 +22,60 @@ Questo modello rappresenta lo sviluppo delle cellule staminali mammarie.
     \label{fig:due-immagini-affiancate}
 \end{figure}
 
+\begin{table}
+\centering
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \hline
+ Id modello& Numero specie &Numero reazioni&numero parametri\\
+ \hline
+ R-HSA-9938206   & 3    &5&   6\\
+ \hline
+\end{tabular}
+\caption{Tabella qualitativa e quantitativa del modello R-HSA-9938206.}
+\label{table:qual-R-HSA-9938206}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+ \hline
+ \multicolumn{6}{|c|}{Tabella degli esperimenti} \\
+ \hline
+ Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
+ \hline
+    1   &Nomad &0.0 &0.0    &5&   6\\
+    2   &Nomad &0.0 &0.0   &5&   6\\
+    4   &Nomad &0.0 & 0.0   &5&   6\\
+    3   &Nomad &0.0 & 0.0   &5&   6\\
+    5   &Nomad &0.0 & 0.0   &5&   6\\
+    6   &Nomad &0.0 & 0.0   &5&   6\\
+    7   &Nevergrad &0.0 & 0.0   &5&   6\\
+    8   &Nevergrad &0.0 & 0.0   &5&   6\\
+    9   &Nevergrad &0.0 & 0.0   &5&   6\\
+    10   &Nevergrad &0.0 & 0.0   &5&   6\\
+    11   &Nevergrad &0.0 & 0.0   &5&   6\\
+    12   &Nevergrad &0.0 & 0.0   &5&   6\\
+    13   &OpenAI &0.0 & 0.0   &5&   6\\
+    14  &OpenAI &0.0 & 0.0   &5&   6\\
+    15  &OpenAI &0.0 & 0.0   &5&   6\\
+    16  &OpenAI &0.0  & 0.0  &5&   6\\
+    17   &OpenAI &0.0 & 0.0   &5&   6\\
+    18   &OpenAI &0.0 & 0.0   &5&   6\\
+ \hline
+\end{tabular}
+\caption{Tabella degli esperimenti del modello R-HSA-9938206. In questo caso sono state provate tutte le possibili permutazioni delle specie. Dato che per ogni permutazione si è raggiunto il minimo globale della funzione allora ogni permutazione delle specie è plausibile.}
+\label{table:esp-R-HSA-9938206}
+\end{table}
+
 La stima dei parametri del modello è stata fatta su ogni possibile permutazione delle specie e si è visto che per ogni permutazione
 l'ottimizzatore riesce a trovare il minimo globale della funzione obbiettivo $\mathcal{L}$, quindi ogni permutazione riesce a trovare un paziente virtuale
 che giustifica il fenomeno.
 
 Si possono vedere i risultati in \ref{fig:due-immagini-affiancate}.
 
-\section{Ripiegamento proteico mediato da chaperoni nel cancro}
+\section{Ripiegamento proteico mediato da chaperoni nel cancro (R-HSA-390471)}
 
 
 \begin{figure}[htbp]
@@ -51,6 +98,35 @@ minimizza la loss è il modello che spiega maggiormente il fenomeno. Vengono rip
     \label{fig:due-immagini-affiancate2}
 \end{figure}
 
+\begin{table}
+\centering
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \hline
+ Id modello& Numero specie &Numero reazioni&numero parametri\\
+ \hline
+ R-HSA-390471   & 5    &7&   7\\
+ \hline
+\end{tabular}
+\caption{Tabella qualitativa e quantitativa del modello R-HSA-390471.}
+\label{table:qual-R-HSA-390471}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+ \hline
+ \multicolumn{6}{|c|}{Tabella degli esperimenti} \\
+ \hline
+ Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
+ \hline
+\end{tabular}
+\caption{Tabella degli esperimenti del modello R-HSA-390471.}
+\label{table:es-R-HSA-390471}
+\end{table}
+
+
 \section{Mutazione IDH1 e produzione di 2-idrossiglutarato (R-HSA-2978092)}
 
 \begin{figure}[htbp]
@@ -71,6 +147,35 @@ La mutazione dell'enzima IDH1 nei glioblastomi altera la sua attività: invece d
     \caption{A sinistra c'è l'ottimizzazione fatta da Nevergrad dei parametri e a destra invece la simulazione di una possibile permutazione.}
     \label{fig:due-immagini-affiancate3}
 \end{figure}
+
+\begin{table}
+\centering
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \hline
+ Id modello& Numero specie &Numero reazioni&numero parametri\\
+ \hline
+ R-HSA-2978092   & 5    &8&   9\\
+ \hline
+\end{tabular}
+\caption{Tabella qualitativa e quantitativa del modello R-HSA-390471.}
+\label{table:qual-R-HSA-2978092}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+ \hline
+ \multicolumn{6}{|c|}{Tabella degli esperimenti} \\
+ \hline
+ Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
+ \hline
+\end{tabular}
+\caption{Tabella degli esperimenti del modello R-HSA-2978092.}
+\label{table:es-R-HSA-2978092}
+\end{table}
+
 
 \section{Regolazione dell'apoptosi tramite ubiquitinazione proteica (R-HSA-169911)}
 
@@ -95,6 +200,35 @@ L'equilibrio tra sopravvivenza e morte cellulare programmata è cruciale per lo 
     \label{fig:due-immagini-affiancate4}
 \end{figure}
 
+\begin{table}
+\centering
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \hline
+ Id modello& Numero specie &Numero reazioni&numero parametri\\
+ \hline
+ R-HSA-169911   & 13    &18&   21\\
+ \hline
+\end{tabular}
+\caption{Tabella qualitativa e quantitativa del modello R-HSA-169911.}
+\label{table:qual-R-HSA-169911}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+ \hline
+ \multicolumn{6}{|c|}{Tabella degli esperimenti} \\
+ \hline
+ Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
+ \hline
+\end{tabular}
+\caption{Tabella degli esperimenti del modello R-HSA-169911.}
+\label{table:es-R-HSA-169911}
+\end{table}
+
+
 \section{Patologie legate alla risposta cellulare allo stress}
 
 Le cellule devono adattarsi a stress come danni al DNA, carenza di nutrienti o ossigeno e radicali liberi. Quando la risposta è alterata, si sviluppano malattie: la senescenza cellulare può favorire il cancro o contribuire a patologie croniche e legate all'età.
@@ -118,3 +252,31 @@ Le cellule devono adattarsi a stress come danni al DNA, carenza di nutrienti o o
 
 Per questo modello sono state provate in parallelo tutte le possibili combinazioni degli ordinamenti delle specie. E' stato scelto come permutazione che spiega meglio il fenomeno
 quella che ha la loss migliore.
+
+\begin{table}
+\centering
+\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
+ \hline
+ \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \hline
+ Id modello& Numero specie &Numero reazioni&numero parametri\\
+ \hline
+ R-HSA-9675132   & 5    &8&   8\\
+ \hline
+\end{tabular}
+\caption{Tabella qualitativa e quantitativa del modello R-HSA-9675132.}
+\label{table:qual-R-HSA-9675132}
+\end{table}
+
+\begin{table}
+\centering
+\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+ \hline
+ \multicolumn{6}{|c|}{Tabella degli esperimenti} \\
+ \hline
+ Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
+ \hline
+\end{tabular}
+\caption{Tabella degli esperimenti del modello R-HSA-9675132.}
+\label{table:es-R-HSA-9675132}
+\end{table}

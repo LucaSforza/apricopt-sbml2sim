@@ -1,10 +1,16 @@
 \chapter{Modellazione Biologica}
 
-\section{Introduzione}
+\section{Background}
+
+\subsection{Cos'è un modello?}
+
+% TODO:
+
+\subsection{Sistemi Dinamici}
 
 I modelli biologici che consideriamo sono sistemi dinamici tempo-invarianti, generalmente non lineari, descritti da equazioni differenziali ordinarie (ODE).
 
-Lo stato del sistema al tempo \(t\) è un vettore \(x(t) = (x_1(t),\dots,x_n(t))^\top \in [0,1]^n \subseteq \mathbb{R}^n\), dove \(x_i(t)\) rappresenta la concentrazione normalizzata della i-esima specie. Poiché le concentrazioni sono normalizzate, \(x_i(t)\in[0,1]\) per ogni \(i\) e ogni \(t\).
+Lo stato del sistema al tempo \(t\) è un vettore \(x(t) = (x_1(t),\dots,x_n(t))^\top \in [0,1]^n \subseteq \mathbb{R}^n\), dove \(x_i(t)\) rappresenta la concentrazione normalizzata della i-esima specie.
 
 In forma compatta le ODE si scrivono
 \[
@@ -17,7 +23,7 @@ Per ogni specie \(x_i\) definiamo
 $R_{x_i} \subseteq \{1,\dots,m\}\quad\text{(reazioni in cui \(x_i\) è reattante)}$,
 $P_{x_i} \subseteq \{1,\dots,m\}\quad\text{(reazioni che producono \(x_i\))}$, 
 
-$n^i_j$ è la stochiometria della specie $i$ nella reazione $j$.
+$n^i_j$ è la stechiometria della specie $i$ nella reazione $j$.
 
 Se \(R_{x_i}\neq\emptyset\) e \(P_{x_i}\neq\emptyset\), l'evoluzione temporale di \(x_i\) è data da:
 \[
@@ -25,11 +31,13 @@ Se \(R_{x_i}\neq\emptyset\) e \(P_{x_i}\neq\emptyset\), l'evoluzione temporale d
 \]
 dove \(v_j(t)\) è la velocità della reazione \(j\).
 
-La velocità di una reazione è data dalla legge dell'azione di massa (mass action).
+La velocità di una reazione è data dalla legge dell'azione di massa (mass action) \cite{klipp2009systems}.
+% TODO: afferma?
+Questa legge afferma che di una reazione chimica è proporzionale al prodotto delle concentrazioni dei reattanti, ciascuna elevata al proprio coefficiente stechiometrico
 
-La velocità di una reazione chimica è proporzionale al prodotto delle concentrazioni dei reagenti, ciascuna elevata al proprio coefficiente stechiometrico
-
-La velocità di una reazione è influenzata da modificatori (enzimi, inibitori). Per modellare l'effetto dei modificatori si usa spesso la funzione di Hill. Per ogni specie modificatrice \(x_\ell\) introduciamo una funzione di Hill generica
+La velocità di una reazione è influenzata anche da modificatori (enzimi, inibitori). Per modellare l'effetto dei modificatori si usa la hill function. Quando la concentrazione di un modificatore raggiunge una certa soglia allora la reazione avviene.
+Questo perché molte reazioni in natura non avvengono se non catalizzate.
+Per ogni specie modificatrice \(x_\ell\) introduciamo una funzione di Hill generica
 \[
 H_\ell(t) =
 \begin{cases}
@@ -47,18 +55,18 @@ $S_i=\{j\in\{1,\dots,n\}\mid x_j \text{ è reattante della reazione } i\}$,
 
 $M_i=\{j\in\{1,\dots,n\}\mid x_j \text{ è modificatore della reazione } i\}$.
 
-$n_i^j$ è la stochiometria della specie $j$ nella reazione $i$.
+$n_i^j$ è la stechiometria della specie $j$ nella reazione $i$.
 
 La velocità \(v_i(t)\) si esprime quindi come
 \[
 v_i(t)=k_i\;\prod_{j\in S_i} x_j(t)^{n_i^j}\;\prod_{j\in M_i} H_j(t),
 \]
 dove \(k_i>0\) è la costante cinetica della reazione. Essa essendo sconosciuta viene aggiunta
-come parametri del modello.
+come parametro del modello.
 
 \section{modelli biologici di Pathway}
 
-Un pathway metabolico (o via metabolica)  è una sequenza di reazioni biochimiche che collega metaboliti chiave.
+Un pathway metabolico (o via metabolica)  è una sequenza di reazioni biochimiche che collega specie chiave.
 
 Un pathway è formato da specie di input che non vengono prodotte da reazioni, ma vengono immesse nel pathway.
 Specie intermedie che sono sia prodotte che consumate da reazioni, specie di output che sono solo prodotte da reazioni e mai consumate
@@ -73,7 +81,7 @@ Esse non vengono prodotte da reazioni (\(P_{x_i}=\emptyset\)) ma vengono immesse
 \]
 
 I pathway hanno degli output che sono specie che vengono prodotte ma non consumate (\(R_{x_i}=\emptyset\)); ad esse si aggiunge una reazione di degradazione, che avrà una constante cinetica e ha come unico reattante
-la concentrazione dell'output stesso, quindi seguendo la mass action rule \cite{klipp2009systems} l'equazione differenziale per gli output è come segue:
+la concentrazione dell'output stesso, quindi seguendo la mass action rule l'equazione differenziale per gli output è come segue:
 \[
 \frac{dx_i}{dt}=\sum_{j\in P_{x_i}} v_j(t) - k_{\mathrm{out},i}\,x_i(t),
 \]
