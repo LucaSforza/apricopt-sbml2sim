@@ -6,6 +6,36 @@
 
 % TODO:
 
+Un modello è una rappresentazione astratta di un sistema reale, che ne descrive 
+il comportamento tramite regole o relazioni. In generale, un modello riceve un 
+\emph{input} $x$, lo elabora secondo la sua struttura interna $h$ e i suoi 
+parametri $\theta$, e produce come risultato un \emph{output} $y$.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[>=Stealth, node distance=2cm]
+  % nodi con scatole
+  \node[draw, rectangle, minimum width=1cm, minimum height=0.8cm] (x) {$x$};
+  \node[draw, rectangle, right=of x, minimum width=1cm, minimum height=0.8cm] (h) {$h$};
+  \node[draw, rectangle, right=of h, minimum width=1cm, minimum height=0.8cm] (y) {$y$};
+  \node[draw, rectangle, above=of h, minimum width=1cm, minimum height=0.8cm] (theta) {$\theta$};
+
+  % archi
+  \draw[->] (x) -- (h);
+  \draw[->] (theta) -- (h);
+  \draw[->] (h) -- (y);
+\end{tikzpicture}
+\caption{Schema del funzionamento di un modello: l'input $x$ è elaborato dal 
+modello $h$, determinato dai parametri $\theta$, per generare l'output $y$.}
+\label{fig:modello}
+\end{figure}
+
+Nel nostro caso, un \emph{paziente virtuale} è identificato dalla coppia 
+$(h, \theta)$: la struttura $h$ rimane fissa, ma i parametri $\theta$ 
+definiscono quale paziente stiamo rappresentando. Cercare un paziente virtuale 
+significa quindi trovare i parametri $\theta$ che rendono il modello coerente 
+con i dati o con i vincoli biologici.
+
 \subsection{Sistemi Dinamici}
 
 I modelli biologici che consideriamo sono sistemi dinamici tempo-invarianti, generalmente non lineari, descritti da equazioni differenziali ordinarie (ODE).

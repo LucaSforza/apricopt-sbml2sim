@@ -32,6 +32,12 @@
 \usepackage{algorithm}
 \usepackage{pgfplots}
 
+\usetikzlibrary{arrows.meta,positioning}
+
+\newcommand{\bentedge}[2]{%
+  \draw[-{Stealth}, bend right=30] (#1) to (#2);
+}
+
 \usetikzlibrary{decorations.pathreplacing}
 \tikzset{arrowed/.style={decorate,
 decoration={show path construction, 
@@ -86,8 +92,8 @@ dx/.initial=0.01,dy/.initial=0.01}
 \bibliographystyle{plainyr-rev} %la bibiografia ordinata in ordine di data dalla più recente
 \setcitestyle{super,open={(},close={)}}
 
-\hypersetup{pdftitle={Un tool per la ricerca di virtual patients in biomchemical network}, pdfauthor={Luca Sforza}}
-\title{Un tool per la ricerca di virtual patients in biomchemical network}
+\hypersetup{pdftitle={Un tool per la ricerca di virtual patients in biochemical networks}, pdfauthor={Luca Sforza}}
+\title{Un tool per la ricerca di virtual patients in biochemical networks}
 \author{Luca Sforza}
 \IDnumber{2050030}
 \course{Laurea triennale in Informatica}
