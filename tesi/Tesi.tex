@@ -31,6 +31,10 @@
 \usepackage{algpseudocode}
 \usepackage{algorithm}
 \usepackage{pgfplots}
+\usepackage{placeins}
+
+\DeclareMathOperator*{\argmin}{arg\,min}
+
 
 \usetikzlibrary{arrows.meta,positioning}
 
@@ -118,13 +122,20 @@ dx/.initial=0.01,dy/.initial=0.01}
 \makeglossaries
 \input{glossario}
 
-\includeonly{Cap_1,Cap_2,Cap_3,Cap_4,Cap_5, tool, openai}
+\includeonly{Cap_1,Cap_2,Cap_3,Cap_4,Cap_5, tool, openai, abstract}
 \newcommand{\Fig}[1]{[{\footnotesize \texttt{Fig.#1}}]}
 \newcommand{\citfig}[1]{\ap{\scriptsize\textrm{(\textit{F#1})}}}
 
 \begin{document}
 \frontmatter
 \maketitle
+
+% Abstract aggiunto nella frontmatter e inserito nella TOC
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\include{abstract}
+
 \dedication{
 \begin{flushright}
 \emph{«Tutti i modelli sono sbagliati, ma alcuni sono utili.»}\\
@@ -161,8 +172,6 @@ dx/.initial=0.01,dy/.initial=0.01}
 %\phantomsection
 %\addcontentsline{toc}{chapter}{\indexname}
 %\printindex
-
-\input{ringraziamenti}
 
 \newpage
 \phantomsection

@@ -3,19 +3,19 @@
 \section{Contesto e Motivazioni}
 
 Tutti gli esseri viventi sono costituiti da cellule, piccole fabbriche biochimiche
-che attraverso dei metabolismi consumano energia per esistere.
+che, attraverso dei metabolismi, consumano energia per esistere.
 Studiare le cellule e il loro funzionamento è fondamentale per comprendere malattie nel corpo umano, come il cancro.
 
 Una cellula nella sua interezza è un sistema biologico governato da reti complesse di interazioni tra entità chimiche come proteine, metaboliti e acidi nucleici.
-Tuttavia si possono studiare solo piccoli parti di questi network metabolici, ovvero i pathway che vanno a studiare una specifica funzione di una cellula. 
+Tuttavia si possono studiare solo piccole parti di questi network metabolici, ovvero i pathway che studiano una specifica funzione cellulare. 
 
 Un modello biologico è formato da molecole e reazioni come mostrato in figura \ref{fig:paziente_virtuale}. 
 Esistono online database di pathway che possono essere resi simulabili modellando le reazioni come equazioni differenziali ordinarie (ODE).
 
-Per questo tirocinio è stato utilizzato reactome \cite{milacic2024reactome}.
-L'accuratezza di queste simulazioni dipende in modo cruciale dalle costanti cinetiche che governano le reazioni. Tali parametri risultano spesso difficili o impossibili da misurare sperimentalmente, lasciando un ampio margine di incertezza nei modelli.
+Per questo tirocinio è stato utilizzato Reactome \cite{milacic2024reactome}.
+L'accuratezza di queste simulazioni dipende in modo cruciale dalle costanti cinetiche che governano le reazioni. Tali parametri risultano spesso difficili o impossibili da misurare sperimentalmente, lasciando un ampio margine di incertezza nei parametri dei modelli.
 
-Però esiste il concetto di \textbf{paziente virtuale} inteso come una collezione di
+Però esiste il concetto di \textbf{paziente virtuale} inteso come una insieme di
 modelli computazionali che rappresentano diversi possibili scenari biologici compatibili con le conoscenze disponibili.
 
 \begin{figure}[htbp]
@@ -29,16 +29,16 @@ modelli computazionali che rappresentano diversi possibili scenari biologici com
 
 Con questa relazione di tirocinio, si vuole presentare un software che, dato un modello biologico, permette di individuare pazienti virtuali plausibili.
 
-I modelli biologici che vogliamo rappresentare sono normalizzati, ovvero la concentrazione delle specie (ovvero un insieme indistinguibile di entità chimiche) sono tutte comprese tra 0 e 1. Se la concentrazione di una specie è vicina al valore 1 vuol dire che è molto espressa,
+I modelli biologici che vogliamo rappresentare sono normalizzati, ovvero la concentrazione delle specie (ovvero un insieme indistinguibile di entità chimiche) sono tutte comprese nell'intervallo $[0,1]$. Se la concentrazione di una specie è vicina al valore 1 significa che è molto espressa;
 se invece è vicino a 0 allora è poco espessa.
 
-Dato un ordinamento del valore delle concentrazioni normalizzato delle specie si vogliono trovare i parametri tale per cui l'ordinamento delle specie normalizzato esiste. Ovvero se esiste
-un paziente virtuale tale che renda plausibile l'ordinamento e confrontare pazienti virtuali per capire il più plausibile.
+Dato un ordinamento del valore delle concentrazioni normalizzato delle specie si vogliono trovare i parametri tali per cui l'ordinamento delle specie normalizzato esiste. Ovvero verificare 
+se esiste un paziente virtuale che renda plausibile l'ordinamento e confrontare diversi pazienti virtuali per individuare il più plausibile.
 
 In particolare, il lavoro introduce un tool per l'esplorazione degli spazi di parametri in reti biochimiche. I contributi principali sono:
 
 \begin{enumerate}
-    \item Generazione di modelli biologici partendo da database esistenti, di cui è stato progetto di Verifica e Validazione dei Sistemi intelligenti e ampliato per gli obbiettivi il tirocinio.
+    \item Generazione di modelli biologici partendo da database esistenti, di cui è stato progetto di Verifica e Validazione dei Sistemi Intelligenti e ampliato per gli obbiettivi il tirocinio.
     \item Ricerca tramite ottimizzazione black box di pazienti virtuali che soddisfano certi vincoli, di cui è stato progetto per l'esame di Intelligenza Artificiale e ampliato per gli obbiettivi il tirocinio.
     \item Implementazione di un algoritmo genetico di OpenAI originariamente usato per il reinforment learning e riadattato per l'ottimizzazione black box.
     \item Simulazione dei modelli biologici in ambienti normalizzati e ricerca di pazienti virtuali: dato un ordinamento normalizzato delle concentrazioni delle specie, trovare i parametri che rendono quell'ordinamento realizzabile (ovvero individuare pazienti virtuali compatibili) e confrontarli per valutarne la plausibilità.

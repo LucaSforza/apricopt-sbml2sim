@@ -38,7 +38,7 @@ con i dati o con i vincoli biologici.
 
 \subsection{Sistemi Dinamici}
 
-I modelli biologici che consideriamo sono sistemi dinamici tempo-invarianti, generalmente non lineari, descritti da equazioni differenziali ordinarie (ODE).
+I modelli biologici che consideriamo sono sistemi dinamici tempo invarianti, generalmente non lineari, descritti da equazioni differenziali ordinarie (ODE).
 
 Lo stato del sistema al tempo \(t\) è un vettore \(x(t) = (x_1(t),\dots,x_n(t))^\top \in [0,1]^n \subseteq \mathbb{R}^n\), dove \(x_i(t)\) rappresenta la concentrazione normalizzata della i-esima specie.
 
@@ -75,7 +75,7 @@ H_\ell(t) =
 \dfrac{K_\ell}{K_\ell + x_\ell(t)^{10}}, &\text{se \(x_\ell\) agisce da inibitore},
 \end{cases}
 \]
-dove \(K_\ell>0\) è la costante di mezzo-saturazione e dato che è ingnota viene aggiunta cime parametro del modello.
+dove \(K_\ell>0\) è la costante di mezzo-saturazione e dato che è ingnota viene aggiunta come parametro del modello.
 
 Per la reazione \(i\in\{1,\dots,m\}\) definiamo inoltre:
 
@@ -100,17 +100,17 @@ Un pathway metabolico (o via metabolica)  è una sequenza di reazioni biochimich
 
 Un pathway è formato da specie di input che non vengono prodotte da reazioni, ma vengono immesse nel pathway.
 Specie intermedie che sono sia prodotte che consumate da reazioni, specie di output che sono solo prodotte da reazioni e mai consumate
-e specie che non vengono ne prodotte ne consumate da alcuna reazione, ma sono enzimi o inibitori che influscono nelle altre reazioni.
+e specie che non vengono né prodotte né consumate da alcuna reazione, ma sono enzimi o inibitori che influscono nelle altre reazioni.
 
 Un esempio tipico di input è l'ATP che funge da "energia" per molte reazioni chimiche.
 
-Esse non vengono prodotte da reazioni (\(P_{x_i}=\emptyset\)) ma vengono immesse nel sistema; si modellano con un termine di ingresso constante \(k_{\mathrm{in},i}\):
+Esse non vengono prodotte da reazioni (\(P_{x_i}=\emptyset\)) ma vengono immesse nel sistema; si modellano con un termine di ingresso costante \(k_{\mathrm{in},i}\):
 
 \[
 \frac{dx_i}{dt}=k_{\mathrm{in},i} - \sum_{j\in R_{x_i}} v_j(t).
 \]
 
-I pathway hanno degli output che sono specie che vengono prodotte ma non consumate (\(R_{x_i}=\emptyset\)); ad esse si aggiunge una reazione di degradazione, che avrà una constante cinetica e ha come unico reattante
+I pathway hanno degli output che sono specie che vengono prodotte ma non consumate (\(R_{x_i}=\emptyset\)); ad esse si aggiunge una reazione di degradazione, che avrà una costante cinetica e ha come unico reattante
 la concentrazione dell'output stesso, quindi seguendo la mass action rule l'equazione differenziale per gli output è come segue:
 \[
 \frac{dx_i}{dt}=\sum_{j\in P_{x_i}} v_j(t) - k_{\mathrm{out},i}\,x_i(t),
@@ -119,7 +119,7 @@ la concentrazione dell'output stesso, quindi seguendo la mass action rule l'equa
 Nei modelli biologici di pathway possono essere presenti specie che non partecipano ne come reattanti ne come prodotti alle reazioni, ma solo come
 modificatori. Quindi queste specie devono avere una costante di immissione ed anche una di degradazione.
 
-Queste specie sono enzimi o inibitori esterni, quindi influiscono sulla velocità delle altre reazioni del modello. La loro dinamica è descritta come segue:
+Queste specie sono enzimi o inibitori esterni, quindi influenzano sulla velocità delle altre reazioni del modello. La loro dinamica è descritta come segue:
 \[
 \frac{dx_i}{dt}=k_{\mathrm{in},i}-k_{\mathrm{out},i}\,x_i(t).
 \]

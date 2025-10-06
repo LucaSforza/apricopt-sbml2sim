@@ -1,15 +1,18 @@
 \begin{abstract}
 
-\paragraph{Contesto}
+Questo lavoro presenta un tool per la ricerca automatica di virtual patients in reti biochimiche, basato sulla formulazione del problema come ottimizzazione vincolata black-box.
+A partire da modelli qualitativi ottenuti dal database Reactome, il tool effettua una conversione automatica in modelli quantitativi SBML, aggiungendo leggi cinetiche, parametri e condizioni iniziali.
+La stima dei parametri è formalizzata come un problema di minimizzazione:
 
+\begin{equation}
+\hat{\theta} = \argmin_{\theta} \mathcal{L}(\theta)
+\end{equation}
 
-\paragraph{Obbiettivi}
+Dove $\mathcal{L}$ combina più termini di perdita per garantire la stabilità dinamica, la normalizzazione delle concentrazioni e la plausibilità biologica dell'ordinamento delle specie.
+L'ottimizzazione è vincolata da relazioni sulle costanti cinetiche e da limiti sulle concentrazioni.
+Il framework integra diversi algoritmi evolutivi e numerici (Nomad, Nevergrad, e un algoritmo genetico OpenAI) per esplorare lo spazio dei parametri e identificare configurazioni compatibili con i vincoli biologici.
+I risultati mostrano che il sistema è in grado di discriminare ordinamenti non plausibili e individuare set di parametri coerenti con le osservazioni biologiche, fornendo una base automatizzata per la simulazione di modelli biologici.
 
-
-\paragraph{Metodi} 
-
-\paragraph{Risultati}
-
-\paragraph{Conclusione}
+Viene mostrato l'utilizzo del tool su 5 modelli presi da Reactome.
 
 \end{abstract}

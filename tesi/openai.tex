@@ -7,14 +7,14 @@ algoritmi.
 In questa relazione di tirocinio si propone l'implementazione di un algoritmo genetico di OpenAI \cite{salimans2017es} per risolvere problemi
 blackbox.
 
-Un algoritmo genetico è una procedure di ricerca euristica ispirate all'evoluzione naturale osservabile in natura.
+Un algoritmo genetico è una procedura di ricerca euristica ispirate all'evoluzione naturale osservabile in natura.
 
 Ad ogni iterazione dell'algoritmo (generazione) un insieme di parametri (genotipi) che vengono perturbati (mutazione genetica) e la funzione obbiettivo
 viene valutata su queste perturbazioni (fitness).
 
 Le perturbazioni con la fitness migliori vengono ricombinate per formare i nuovi parametri per la nuova generazione.
 
-In questo algoritmo di OpenAI la popolazione viene rappresentata come una distribuzione gaussiana multivariata che ha media sui parametri.
+In questo algoritmo di OpenAI la popolazione è rappresentata come una distribuzione gaussiana multivariata che ha media sui parametri.
 
 Quindi si voglio trovare i parametri che  massimizzano:
 
@@ -22,7 +22,7 @@ Quindi si voglio trovare i parametri che  massimizzano:
     \mathbb{E}_{\varepsilon \sim \mathcal{N}(0,I)} \{ \mathcal{L}(\theta + \sigma \varepsilon) \}
 \end{equation}
 
-Possiamo ottimizzare i parametri $\theta$ usando un gradient descend stocastico, vedere la figura \ref{gradient_descend} per una visualizzazione grafica del funzionamento.
+Possiamo ottimizzare i parametri $\theta$ usando un gradient descent stocastico, vedere la figura \ref{gradient_descend} per una visualizzazione grafica del funzionamento.
 
 \begin{equation}
     \nabla_{\theta} \mathbb{E}_{\varepsilon \sim \mathcal{N}(0,I)} \{ \mathcal{L}(\theta + \sigma \varepsilon) \} = -\frac{1}{\sigma} \mathbb{E}_{\varepsilon \sim \mathcal{N}(0,I)} \{ \mathcal{L}(\theta + \sigma \varepsilon) \varepsilon \}
@@ -37,7 +37,7 @@ Esso può essere stimato campionando $n$ valori $\varepsilon_1, \dots, \varepsil
 
 Ad ogni generazione i nuovi parametri si spostano in direzione del gradiente.
 
-Poiche il gradiente può essere molto lungo esso va scalato per un iper-parametro dell'algoritmo $\alpha > 0$ chiamato \textbf{learning rate}.
+Poiché il gradiente può avere grande ampiezza ,esso va scalato per un iperparametro dell'algoritmo $\alpha > 0$ detto \textbf{learning rate}.
 
 \begin{figure}
 \centering
@@ -61,7 +61,7 @@ Poiche il gradiente può essere molto lungo esso va scalato per un iper-parametr
     \addplot3[samples y=0,arrowed] coordinates \lstCoords;
     \end{axis}
     \end{tikzpicture}
-\caption{Visualizzazione del gradient descend}
+\caption[Visualizzazione del gradient descent, presa da qui]{Visualizzazione del gradient descent, presa da \href{https://tex.stackexchange.com/questions/544796/plot-gradient-descent}{https://tex.stackexchange.com/questions/544796/plot-gradient-descent}}
 \label{gradient_descend}
 \end{figure}
 

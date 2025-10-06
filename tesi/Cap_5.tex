@@ -1,7 +1,7 @@
 \chapter{Conclusione}
 
-Il lavoro ha introdotto un tool per l'individuazione di pazienti virtuali
-in reti biochimiche, fondato su tre elementi principali: 
+Il lavoro introduce un tool per l'individuazione automatica di pazienti virtuali
+in reti biochimiche, basato su tre elementi principali: 
 la conversione automatica di modelli qualitativi (Reactome) 
 in modelli quantitativi SBML, la formulazione del 
 problema di stima parametrica come ottimizzazione vincolata black-box,
@@ -18,41 +18,5 @@ I risultati sperimentali hanno dimostrato che il sistema è in grado di:
 La validazione su pathway eterogenei ha evidenziato 
 la capacità del framework di discriminare ordinamenti 
 non realizzabili e di generare configurazioni coerenti 
-con fenomeni biologici complessi.
+con fenomeni biologici complessi, mantenendo tempi e uso di memoria ragionevoli.
 
-
-\section{Risultati congiunti degli esperimenti}
-
-% TODO: descrivere quali algoritmi vanni meglio,
-% commenta i tempi delle CPU e l'utilizzo della RAM
-
-\begin{table}
-\centering
-\begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
- \hline
- \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
- \hline
- Id modello& Numero specie &Numero reazioni&numero parametri\\
- \hline
- R-HSA-9675132   & 5    &8&   8\\
- \hline
-\end{tabular}
-\caption{Tabella qualitativa e quantitativa del modello R-HSA-9675132.}
-\label{table:qual}
-\end{table}
-
-\begin{table}
-\centering
-\begin{tabular}{ |p{1.5cm}|p{1.5cm}||p{2.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|  }
- \hline
- \multicolumn{7}{|c|}{Tabella degli esperimenti} \\
- \hline
- Id modello&Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
- \hline
-\end{tabular}
-\caption{Tabella degli esperimenti del modello R-HSA-9675132.}
-\label{table:es}
-\end{table}
-
-
-% TODO: aggiungi tabella con tutti i risultati congiunti

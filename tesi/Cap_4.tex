@@ -1,5 +1,32 @@
 \chapter{Esempi di modelli}
 
+% Aggiungi nel preambolo: \usepackage{placeins}
+In questo capitolo sono presentati esempi concreti di modelli biologici e i risultati
+ degli esperimenti di ottimizzazione e simulazione eseguiti su ciascuno di essi.
+ Per ogni modello la struttura delle informazioni è la seguente:
+ \begin{itemize}
+    \item figura principale: rappresentazione grafica del modello
+    \item figura aggiuntiva: a sinistra, i risultati dell'ottimizzazione dei parametri
+   (confronto tra diverse esecuzioni o ordinamenti delle specie) e a destra
+   la simulazione temporale corrispondente a una permutazione scelta;
+   \item tabella qualitativa: identifica il modello e riporta il numero di specie, reazioni e parametri
+   \item tabella degli esperimenti: elenco delle singole esecuzioni con le seguenti colonne:
+     Id esperimento, Ottimizzatore (algoritmo usato), Valore loss (valore della funzione obiettivo),
+     Target loss (soglia desiderata), Tempo impiegato (formato minuti:secondi o secondi) e
+     RAM utilizzata (espresso in kilobyte)
+ \end{itemize}
+
+
+ Questa introduzione serve a chiarire come leggere le pagine successive: per ogni modello
+ si può rapidamente valutare la complessità strutturale (tabella qualitativa), l'efficacia
+ degli ottimizzatori provati (tabella degli esperimenti) e l'impatto delle permutazioni
+ sull'interpretazione biologica (figure di ottimizzazione e simulazione).
+
+ Per i modelli piccoli (tutti tranne R-HSA-169911) sono state provate tutte le possibili permutazioni delle specie
+ per trovare la permutazione più plausibile. Nel caso del modello R-HSA-9938206 sono stati riportati i risultati per ogni singola permutazione.
+
+ Invece per il modello R-HSA-169911 sono state campionate casualmente le permutazioni per trovare una permutazione plausibile.
+
 
 \section{Cellule staminali mammarie (R-HSA-9938206)}
 
@@ -10,15 +37,13 @@
     \label{fig:R-HSA-9938206}
 \end{figure}
 
-Questo modello rappresenta lo sviluppo delle cellule staminali mammarie.
-
 \begin{figure}[htbp]
     \centering
     \makebox[\textwidth][c]{%
         \includegraphics[width=0.5\textwidth]{9938206_plot.png}%
         \includegraphics[width=0.5\textwidth]{simulation_9938206.png}%
     }%
-    \caption{A sinistra l'ottimizzazione dei parametri per ogni ordinamento delle specie e a destra la simulazione di una possibile permutazione..}
+    \caption{A sinistra l'ottimizzazione dei parametri con Nomad per ogni ordinamento possibile, a destra la simulazione di una possibile permutazione.}
     \label{fig:due-immagini-affiancate}
 \end{figure}
 
@@ -26,7 +51,7 @@ Questo modello rappresenta lo sviluppo delle cellule staminali mammarie.
 \centering
 \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
  \hline
- \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \multicolumn{4}{|c|}{Dati qualitativi del modello} \\
  \hline
  Id modello& Numero specie &Numero reazioni&numero parametri\\
  \hline
@@ -39,41 +64,54 @@ Questo modello rappresenta lo sviluppo delle cellule staminali mammarie.
 
 \begin{table}
 \centering
-\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2.1cm}|p{2cm}|  }
  \hline
  \multicolumn{6}{|c|}{Tabella degli esperimenti} \\
  \hline
  Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
  \hline
-    1   &Nomad &0.0 &0.0    &5&   6\\
-    2   &Nomad &0.0 &0.0   &5&   6\\
-    4   &Nomad &0.0 & 0.0   &5&   6\\
-    3   &Nomad &0.0 & 0.0   &5&   6\\
-    5   &Nomad &0.0 & 0.0   &5&   6\\
-    6   &Nomad &0.0 & 0.0   &5&   6\\
-    7   &Nevergrad &0.0 & 0.0   &5&   6\\
-    8   &Nevergrad &0.0 & 0.0   &5&   6\\
-    9   &Nevergrad &0.0 & 0.0   &5&   6\\
-    10   &Nevergrad &0.0 & 0.0   &5&   6\\
-    11   &Nevergrad &0.0 & 0.0   &5&   6\\
-    12   &Nevergrad &0.0 & 0.0   &5&   6\\
-    13   &OpenAI &0.0 & 0.0   &5&   6\\
-    14  &OpenAI &0.0 & 0.0   &5&   6\\
-    15  &OpenAI &0.0 & 0.0   &5&   6\\
-    16  &OpenAI &0.0  & 0.0  &5&   6\\
-    17   &OpenAI &0.0 & 0.0   &5&   6\\
-    18   &OpenAI &0.0 & 0.0   &5&   6\\
+    1   &Nomad &0.0 &0.0    &52 secondi&   376660K\\
+     \hline
+    2   &Nomad &0.0 &0.0   &51 secondi&   377888K\\
+     \hline
+    3   &Nomad &0.0 & 0.0   &54 secondi&   377072K\\
+     \hline
+    4   &Nomad &0.0 & 0.0   &53 secondi&   374712K\\
+     \hline
+    5   &Nomad &0.0 & 0.0   &56 secondi&   374504K\\
+     \hline
+    6   &Nomad &0.0 & 0.0   &56 secondi&   375436K\\
+     \hline
+    7   &Nevergrad &0.0 & 0.0   &20:44 minuti&   392892K\\
+     \hline
+    8   &Nevergrad &0.0 & 0.0   &32:36 minuti&   384424K\\
+     \hline
+    9   &Nevergrad &0.0 & 0.0   &33:16 minuti&   386444K\\
+     \hline
+    10   &Nevergrad &0.0 & 0.0   &32:24 minuti&   387988K\\
+     \hline
+    11   &Nevergrad &0.0 & 0.0   &16:02 minuti&   375952K\\
+     \hline
+    12   &Nevergrad &0.0 & 0.0   &15:34 minuti&   374188K\\
+     \hline
+    13   &OpenAI &0.335 & 0.0   &1:14 minuti&   386244K\\
+     \hline
+    14  &OpenAI &0.216 & 0.0   &1:13 minuti&   379712K\\
+     \hline
+    15  &OpenAI &0.466 & 0.0   &1:13 minuti&   377920K\\
+     \hline
+    16  &OpenAI &0.422  & 0.0  &1:14 minuti&   373796K\\
+     \hline
+    17   &OpenAI &0.220 & 0.0   &1:13 minuti&   374292K\\
+     \hline
+    18   &OpenAI &0.299 & 0.0   &1:13 minuti&   373212K\\
  \hline
 \end{tabular}
-\caption{Tabella degli esperimenti del modello R-HSA-9938206. In questo caso sono state provate tutte le possibili permutazioni delle specie. Dato che per ogni permutazione si è raggiunto il minimo globale della funzione allora ogni permutazione delle specie è plausibile.}
+\caption{Tabella degli esperimenti del modello R-HSA-9938206.}
 \label{table:esp-R-HSA-9938206}
 \end{table}
 
-La stima dei parametri del modello è stata fatta su ogni possibile permutazione delle specie e si è visto che per ogni permutazione
-l'ottimizzatore riesce a trovare il minimo globale della funzione obbiettivo $\mathcal{L}$, quindi ogni permutazione riesce a trovare un paziente virtuale
-che giustifica il fenomeno.
-
-Si possono vedere i risultati in \ref{fig:due-immagini-affiancate}.
+\FloatBarrier
 
 \section{Ripiegamento proteico mediato da chaperoni nel cancro (R-HSA-390471)}
 
@@ -85,16 +123,13 @@ Si possono vedere i risultati in \ref{fig:due-immagini-affiancate}.
     \label{fig:R-HSA-390471}
 \end{figure}
 
-Per il modello \ref{fig:R-HSA-390471} sono stati provati ogni possibile permutazione dell'ordinamento delle specie, ma non per ogni ordinamento sono stati trovate delle constanti cinetiche. L'ordinamento che 
-minimizza la loss è il modello che spiega maggiormente il fenomeno. Vengono riportate due ottimizzazioni, una dove non è stato trovato un paziente virtuale e quella che maggiormente spiega il fenomeno.
-
 \begin{figure}[htbp]
     \centering
     \makebox[\textwidth][c]{%
         \includegraphics[width=0.5\textwidth]{390471_plot.png}%
         \includegraphics[width=0.5\textwidth]{390471_sim.png}%
     }%
-    \caption{A sinistra c'è l'ottimizzazione dei parametri, una che ha successo e un altra che non ha successo; a destra invece la simulazione di una possibile permutazione.}
+    \caption{A sinistra l'ottimizzazione dei parametri con Nomad per un ordinamento plausibile e uno non plausibile, a destra la simulazione di un ordinamento plausibile.}
     \label{fig:due-immagini-affiancate2}
 \end{figure}
 
@@ -102,7 +137,7 @@ minimizza la loss è il modello che spiega maggiormente il fenomeno. Vengono rip
 \centering
 \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
  \hline
- \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \multicolumn{4}{|c|}{Dati qualitativi del modello} \\
  \hline
  Id modello& Numero specie &Numero reazioni&numero parametri\\
  \hline
@@ -115,17 +150,30 @@ minimizza la loss è il modello che spiega maggiormente il fenomeno. Vengono rip
 
 \begin{table}
 \centering
-\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2.1cm}|p{2cm}|  }
  \hline
  \multicolumn{6}{|c|}{Tabella degli esperimenti} \\
  \hline
  Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
+ \hline
+ 1 & Nomad & 0.194 & 0.5 & 5:54 minuti & 370840K\\
+ \hline
+ 2 & Nomad & 1.543 & 0.5 & 2:10 minuti & 373264K\\
+ \hline
+ 3 & Nevergrad & 1.628 & 0.5 & 18:41 minuti & 370408K\\
+ \hline
+ 4 & Nevergrad & 4.34 & 0.5 & 18:30 minuti & 370368K\\
+ \hline
+ 5 & OpenAI & 10.344 & 0.5 & 8:21 minuti & 370368K\\
+ \hline
+ 6 & OpenAI & 2225.104 & 0.5 & 18:34 & 370804K\\
  \hline
 \end{tabular}
 \caption{Tabella degli esperimenti del modello R-HSA-390471.}
 \label{table:es-R-HSA-390471}
 \end{table}
 
+\FloatBarrier
 
 \section{Mutazione IDH1 e produzione di 2-idrossiglutarato (R-HSA-2978092)}
 
@@ -136,7 +184,6 @@ minimizza la loss è il modello che spiega maggiormente il fenomeno. Vengono rip
     \label{fig:R-HSA-2978092}
 \end{figure}
 
-La mutazione dell'enzima IDH1 nei glioblastomi altera la sua attività: invece di convertire isocitrato in $\alpha$-chetoglutarato, usa NADPH per trasformare $\alpha$-chetoglutarato in 2-idrossiglutarato. Questo metabolita anomalo si accumula nelle cellule e può favorirne la crescita tumorale.
 
 \begin{figure}[htbp]
     \centering
@@ -144,7 +191,7 @@ La mutazione dell'enzima IDH1 nei glioblastomi altera la sua attività: invece d
         \includegraphics[width=0.5\textwidth]{2978092_plot.png}%
         \includegraphics[width=0.5\textwidth]{2978092_sim.png}%
     }%
-    \caption{A sinistra c'è l'ottimizzazione fatta da Nevergrad dei parametri e a destra invece la simulazione di una possibile permutazione.}
+    \caption{A sinistra l'ottimizzazione dei parametri con Nomad per un ordinamento plausibile e uno non plausibile, a destra la simulazione di un ordinamento plausibile.}
     \label{fig:due-immagini-affiancate3}
 \end{figure}
 
@@ -152,7 +199,7 @@ La mutazione dell'enzima IDH1 nei glioblastomi altera la sua attività: invece d
 \centering
 \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
  \hline
- \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \multicolumn{4}{|c|}{Dati qualitativi del modello} \\
  \hline
  Id modello& Numero specie &Numero reazioni&numero parametri\\
  \hline
@@ -175,14 +222,22 @@ La mutazione dell'enzima IDH1 nei glioblastomi altera la sua attività: invece d
  \hline
  2 & Nomad & 1.535 & 0.1 & 1:24 minuti & 370788K\\
  \hline
+ 3 & Nevergrad & 1.134 & 0.1 & 5:32 minuti & 370416K \\
+ \hline
+ 4 & Nevergrad & 5.718 & 0.1 & 5:29 minuti & 370524K\\
+ \hline
+ 5 & OpenAI & 81489.407 & 0.1 & 40 secondi & 370400K\\
+ \hline
+ 6 & OpenAI & 30536.634 & 0.1 & 30 secondi & 370704K\\
+    \hline
 \end{tabular}
 \caption{Tabella degli esperimenti del modello R-HSA-2978092.}
 \label{table:es-R-HSA-2978092}
 \end{table}
 
+\FloatBarrier
 
 \section{Regolazione dell'apoptosi tramite ubiquitinazione proteica (R-HSA-169911)}
-
 
 
 \begin{figure}[htbp]
@@ -192,15 +247,13 @@ La mutazione dell'enzima IDH1 nei glioblastomi altera la sua attività: invece d
     \label{fig:R-HSA-169911}
 \end{figure}
 
-L'equilibrio tra sopravvivenza e morte cellulare programmata è cruciale per lo sviluppo e la salute dei tessuti. L'ubiquitinazione e la degradazione delle proteine sono meccanismi chiave che controllano l'attivazione o l'inibizione dell'apoptosi (morte cellulare programmata).
-
 \begin{figure}[htbp]
     \centering
     \makebox[\textwidth][c]{%
         \includegraphics[width=0.5\textwidth]{169911_plot.png}%
         \includegraphics[width=0.5\textwidth]{169911_sim.png}%
     }%
-    \caption{A sinistra c'è l'ottimizzazione fatta da Nevergrad dei parametri e a destra invece la simulazione di una possibile permutazione.}
+    \caption{A sinistra l'ottimizzazione dei parametri con Nomad per un ordinamento plausibile e uno non plausibile, a destra la simulazione di un ordinamento plausibile.}
     \label{fig:due-immagini-affiancate4}
 \end{figure}
 
@@ -208,7 +261,7 @@ L'equilibrio tra sopravvivenza e morte cellulare programmata è cruciale per lo 
 \centering
 \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
  \hline
- \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \multicolumn{4}{|c|}{Dati qualitativi del modello} \\
  \hline
  Id modello& Numero specie &Numero reazioni&numero parametri\\
  \hline
@@ -221,21 +274,32 @@ L'equilibrio tra sopravvivenza e morte cellulare programmata è cruciale per lo 
 
 \begin{table}
 \centering
-\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|  }
+\begin{tabular}{ |p{2cm}||p{2.5cm}|p{2cm}|p{2cm}|p{2.1cm}|p{2cm}|  }
  \hline
  \multicolumn{6}{|c|}{Tabella degli esperimenti} \\
  \hline
  Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
+ \hline
+ 1 & Nomad & 2.151 & 2.5 & 33:20 minuti & 380932K\\
+ \hline
+ 2 & Nomad & 2.861 & 2.5 & 6:30 minuti & 383320K\\
+ \hline
+ 3 & Nevergrad & 10.040 & 2.5 & 14:20 minuti & 798324K\\
+ \hline
+ 4 & Nevergrad & 10.767 & 2.5 & 23:10 minuti & 808512K\\
+ \hline
+ 5 & OpenAI & 32320.706 & 2.5 & 4:20 minuti & 384508K\\
+ \hline
+ 6 & OpenAI & 39903.848 & 2.5 & 4:20 minuti & 380256K\\
  \hline
 \end{tabular}
 \caption{Tabella degli esperimenti del modello R-HSA-169911.}
 \label{table:es-R-HSA-169911}
 \end{table}
 
+\FloatBarrier
 
-\section{Patologie legate alla risposta cellulare allo stress}
-
-Le cellule devono adattarsi a stress come danni al DNA, carenza di nutrienti o ossigeno e radicali liberi. Quando la risposta è alterata, si sviluppano malattie: la senescenza cellulare può favorire il cancro o contribuire a patologie croniche e legate all'età.
+\section{Patologie legate alla risposta cellulare allo stress (R-HSA-9675132)}
 
 \begin{figure}[htbp]
     \centering
@@ -250,18 +314,16 @@ Le cellule devono adattarsi a stress come danni al DNA, carenza di nutrienti o o
         \includegraphics[width=0.5\textwidth]{9675132_plot.png}%
         \includegraphics[width=0.5\textwidth]{9675132_sim.png}%
     }%
-    \caption{A sinistra c'è l'ottimizzazione dei parametri, una che ha successo e un altra che non ha successo; a destra invece la simulazione di una possibile permutazione.}
+    \caption{A sinistra l'ottimizzazione dei parametri con Nomad per un ordinamento plausibile e uno non plausibile, a destra la simulazione di un ordinamento plausibile.}
     \label{fig:due-immagini-affiancate5}
 \end{figure}
 
-Per questo modello sono state provate in parallelo tutte le possibili combinazioni degli ordinamenti delle specie. E' stato scelto come permutazione che spiega meglio il fenomeno
-quella che ha la loss migliore.
 
 \begin{table}
 \centering
 \begin{tabular}{ |p{3cm}||p{3cm}|p{3cm}|p{3cm}|  }
  \hline
- \multicolumn{4}{|c|}{Tabella qualitativa del modello} \\
+ \multicolumn{4}{|c|}{Dati qualitativi del modello} \\
  \hline
  Id modello& Numero specie &Numero reazioni&numero parametri\\
  \hline
@@ -280,7 +342,21 @@ quella che ha la loss migliore.
  \hline
  Id esperimento&Ottimizzatore&Valore loss & Target loss &Tempo impiegato&RAM utilizzata\\
  \hline
+ 1 & Nomad & 0.569 & 1.0 & 1:28 minuti & 370960K\\
+ \hline
+ 2 & Nomad & 1.309 & 1.0 & 42 secondi & 370264K\\
+ \hline
+ 3 & Nevergrad & 4.430 & 1.0 & 6:32 minuti & 370844K\\
+ \hline
+ 4 & Nevergrad & 7.673 & 1.0 &2:59 minuti &379144K\\
+ \hline
+ 5 & OpenAI & 5546.639 & 1.0 & 1:01 minuti & 370352K\\
+ \hline 
+ 6 & OpenAI & 5627.376 & 1.0 & 58 secondi & 370256K\\
+ \hline
 \end{tabular}
 \caption{Tabella degli esperimenti del modello R-HSA-9675132.}
 \label{table:es-R-HSA-9675132}
 \end{table}
+
+\FloatBarrier

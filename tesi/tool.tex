@@ -1,12 +1,12 @@
 \chapter{Progettazione del tool}
 
-In Figura \ref{fig:uml} è mostrato il diagramma UML che evidenzia le componenti centrali del tool che si appoggia al framework apricopt.
+In Figura \ref{fig:uml} è mostrato il diagramma UML che evidenzia le componenti centrali del tool che si appoggia al framework Apricopt.
 
-Apricopt ha delle interfaccie che permettono di modellare problemi di ottimizzazione BlackBox, in particolare quei problemi che richiedono la simulazione di un modello biologico.
+Apricopt ha delle interfacce che permettono di modellare problemi di ottimizzazione BlackBox, in particolare quei problemi che richiedono la simulazione di un modello biologico.
 
 Al centro del framework è il BlackBoxSolver, che ha il compito di cercare i parametri ottimali.
 
-Esso è un interfaccia, una classe può essere estesa ad essa per implementare un algoritmo di ottimizzazione, per esempio per quanto riguarda l'algoritmo evolutivo di OpenAI. Oppure si possono usare ottimizzatori terzi come Nevergrad o Nomad.
+Esso è un'interfaccia, una classe può essere estesa ad essa per implementare un algoritmo di ottimizzazione, per esempio per quanto riguarda l'algoritmo evolutivo di OpenAI. Oppure si possono usare ottimizzatori terzi come Nevergrad o Nomad.
 
 I problemi black box che stiamo considerando sono la stima dei parametri di un dato modello biologico.
 
@@ -17,13 +17,13 @@ il modello con i parametri
 $ \theta $  e calcola 
 $\mathcal{L}(\theta)$ sulla base della traiettria $\mathcal{T}(\theta)$.
 
-Per calcolare la traiettoria è necessario poter simulare il modello. Per fare ciò apricopt ha diversi simulatori utilizzabili.
+Per calcolare la traiettoria è necessario poter simulare il modello. Per fare ciò Apricopt ha diversi simulatori utilizzabili.
 
 
 Per gli esempi mostrati in questa relazione di tirocinio è stato utilizzato roadrunner \cite{welsh2023libroadrunner}. Dal'UML in figura si può vedere come 
 il simulatore è una classe astratta. Oltre al simulatore è necessario implementare l'istanza di un modello roadrunner.
 
-Si può specificare anche un valore $B$ tale per cui se vengono trovati dei parametri tale che $\mathcal{L}(\theta) \leq B$ allora i parametri sono sufficientemente buoni.
+Si può specificare anche un valore $B$ tale per cui, se vengono trovati dei parametri tale che $\mathcal{L}(\theta) \leq B$ allora i parametri sono sufficientemente buoni.
 
 Nell'algoritmo \ref{alg:cap} si può vedere l'implementazione di NevergradSolver.
 
@@ -36,7 +36,7 @@ Un esempio è mostrato in figura \ref{fig:yaml}.
 
 Il codice sorgente del progetto è disponibile su GitHub:
 
-\href{https://github.com/LucaSforza/apricopt-sbml2sim}{https://github.com/LucaSforza/apricopt-sbml2sim}.
+\href{https://github.com/LucaSforza/Apricopt-sbml2sim}{https://github.com/LucaSforza/Apricopt-sbml2sim}.
 
 \begin{algorithm}
 \caption{Metodo solve sovrascritto dalla classe Nevergrad solver}\label{alg:cap}
@@ -111,10 +111,10 @@ riguarda le reazioni mancano le leggi cinetiche, per i vari compartimenti non è
 volume, non sono specificate le unità di misura e non sono specificate le concentrazioni iniziali delle
 specie.
 
-Per il progetto di Verifica e Validazione dei Sistemi Intellingenti, su cui si basa il tirocinio, è stata implementata
+Per il progetto di Verifica e Validazione dei Sistemi Intelligenti, su cui si basa il tirocinio, è stata implementata
 la conversione da modello qualitativo a modello quantitativo.
 
-I modelli di Reactome sono descritti usando SBML \cite{hucka2003sbml} , il tool prende questa descrizione ed aggiunte tutte le informazioni mancanti
+I modelli di Reactome sono descritti usando SBML \cite{hucka2003sbml} , il tool prende questa descrizione e aggiunge tutte le informazioni mancanti
 per rendere il modello simulabile.
 
 Nella figura \ref{fig:sbml} è riportato un esempio minimale di file SBML (Level 3 Version 1). Questo file può essere preso in input dal tool e arricchito con le informazioni quantitative necessarie (leggi cinetiche, volumi, unità, concentrazioni iniziali, parametri, ecc.).
@@ -151,7 +151,7 @@ Nella figura \ref{fig:sbml} è riportato un esempio minimale di file SBML (Level
 </sbml>
 \end{verbatim}
 \caption{Esempio di modello SBML quantitativo generato dal tool. Si possono vedere i modelli SBML generati usati come esempi nella repository: Il codice sorgente del progetto è disponibile su GitHub:
-\href{https://github.com/LucaSforza/apricopt-sbml2sim}{https://github.com/LucaSforza/apricopt-sbml2sim}.}
+\href{https://github.com/LucaSforza/Apricopt-sbml2sim}{https://github.com/LucaSforza/Apricopt-sbml2sim}.}
 \label{fig:sbml}
 \end{figure}
 
@@ -159,7 +159,7 @@ Nella figura \ref{fig:sbml} è riportato un esempio minimale di file SBML (Level
 
 \section{Ordinamento delle specie e plausibilità del modello}
 
-L'obbiettivo del tirocinio è quello di trovare l'ordinamento delle specie che è più plausibile
+L'obiettivo del tirocinio è quello di trovare l'ordinamento delle specie che è più plausibile
 all'interno di un modello biologico.
 
 Questo viene fatto eseguendo una ricerca dei parametri secondo un certo ordinamento.
